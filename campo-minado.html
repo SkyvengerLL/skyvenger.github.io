@@ -36,7 +36,9 @@
          var i;
          var j;
          var numBombas = 0;
-         var jogador = ''
+         var jogador = '';
+         var lin=0;
+         var col=0;
 
          //configurações
          function comeco (nome, linhas, colunas, dificuldade){
@@ -59,20 +61,23 @@
                   bombas.pop();
             }
             if (dificuldade.value == 1){
-               numBombas= linhas.value*linhas.value/20;
+               numBombas= linhas.value*colunas.value/20;
             }else {
                if (dificuldade.value == 2){
-                  numBombas= linhas.value*linhas.value/10;
+                  numBombas= linhas.value*colunas.value/10;
                }else{
-                  numBombas= linhas.value*linhas.value/5;
+                  numBombas= linhas.value*colunas.value/5;
                }
             }
             
             bombas.push([Math.floor(Math.random() *10), Math.floor(Math.random() *10)])
             for(k=0;k <numBombas-1; k++){
                gerando_bombas(bombas);
-               }
+            }
             
+            lin=linhas.value;
+            col=colunas.value;
+
             canvas.addEventListener('click', selecionar);
             canvas.addEventListener('contextmenu', direito);
             jogador= nome.value;
@@ -94,8 +99,8 @@
          //botão esquerdo 
          function selecionar(evento) {
             var [x,y] = [Math.floor(evento.offsetX/50), Math.floor(evento.offsetY/50)]
-            if (x > colunas-1) return;
-            if (y > linhas-1) return;
+            if (x > col-1) return;
+            if (y > lin-1) return;
             var [ver,pos]= verificar_lista(x,y, bombas);
             if (ver){
                contexto.fillStyle="red";
@@ -134,6 +139,8 @@
          };
          //botão direito
          function direito(evento){
+            if (x > colunas-1) return;
+            if (y > linhas-1) return;
             evento.preventDefault();
             var x= Math.floor(evento.offsetX/50);
             var y= Math.floor(evento.offsetY/50);
