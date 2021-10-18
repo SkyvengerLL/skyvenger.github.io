@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>Campo Minado</title>
+   </head>
+   <body>
+      <canvas id='titulo' width="500" height="100"></canvas>
+      <fieldset>
+         <legend>Configuações</legend>
+         <label for="nome">Nome do Jogador: </label>
+         <input type="text" id="nome" name="nome" value="Jogador"><br><br>
+         <label for="linhas">Quantidade de Linhas (min 10 e máx 20):</label>
+         <input type="number" id="linhas" name="linhas" min="10" max="20"><br><br>
+         <label for="colunas">Quantidade de Colunas (min 10 e máx 20):</label>
+         <input type="number" id="colunas" name="colunas" min="10" max="20"><br><br>
+         <label for="dificuldade" >Selecione a dificuldade:</label>
+         <select id="dificuldade" name="dificuldade" value=1 >
+            <option value=1>Fácil</option>
+            <option value=2>Médio</option>
+            <option value=3>Dificíl</option>
+         </select><br><br>
+         <button onclick="comeco(nome, linhas, colunas, dificuldade)">Começar</button>
+      </fieldset>
+     <canvas id='final' width="500" height="100" ></canvas>
+     <canvas id='myCanvas' width="1000" height="1000" ></canvas>
+     
+      <script>
+         //declarando variáveis
+         var canvas = document.getElementById("myCanvas");
+         var contexto = canvas.getContext("2d");
+         var final = document.getElementById("final");
+         var cntx = final.getContext("2d");
+         var bombas = [];
+         var bandeiras = [];
+         var i;
+         var j;
+         var numBombas = 0;
+         var jogador = ''
+
+         //configurações
+         function comeco (nome, linhas, colunas, dificuldade){
+            if (linhas.value > 20 || linhas.value < 10) return;
+            if (colunas.value > 20 || colunas.value < 10) return;
+            
+            //desenhando o cenário
+            contexto.clearRect(0, 0, canvas.width, canvas.height);
+            cntx.clearRect(0, 0, final.width, final.height);
+            for (i=0; i<colunas.value;i++){
+               for(j=0; j<linhas.value;j++){
+                  contexto.beginPath();
+                  contexto.rect(i*50,j*50, 50, 50);
+                  contexto.stroke();
+                  }
+            }
+            
+            //gerando bombas
+            for (var i=0; i < bombas.length;i++){
+                  bombas.pop();
+            }
+            if (dificuldade.value == 1){
+               numBombas= linhas.value*linhas.value/20;
+            }else {
+               if (dificuldade.value == 2){
+                  numBombas= linhas.value*linhas.value/10;
+               }else{
+                  numBombas= linhas.value*linhas.value/5;
+               }
+            }
+            
+            bombas.push([Math.floor(Math.random() *10), Math.floor(Math.random() *10)])
+            for(k=0;k <numBombas-1; k++){
+               gerando_bombas(bombas);
+               }
+            
+            canvas.addEventListener('click', selecionar);
+            canvas.addEventListener('contextmenu', direito);
+            jogador= nome.value;
+         }
+
+
+         //função de gerar bombas prescisa de ter no mínimo 1 antes
+         function gerando_bombas(bombas){
+         var [x,y] = [Math.floor(Math.random() *10), Math.floor(Math.random() *10)];
+         [ver,num] = verificar_lista(x,y, bombas)
+         if(!ver){
+               bombas.push([x,y]);
+         }else{
+               gerando_bombas(bombas);
+            }
+         }
+
+         //eventos de clique
+         //botão esquerdo 
+         function selecionar(evento) {
+            var [x,y] = [Math.floor(evento.offsetX/50), Math.floor(evento.offsetY/50)]
+            if (x > colunas-1) return;
+            if (y > linhas-1) return;
+            var [ver,pos]= verificar_lista(x,y, bombas);
+            if (ver){
+               contexto.fillStyle="red";
+               contexto.fillRect(x*50,y*50,50,50);
+               contexto.beginPath();
+               contexto.rect(x*50,y*50, 50, 50);
+               contexto.stroke();
+               bombas.splice(pos,1);
+               bombas.forEach(function (item, indice, array) {
+                  var [x,y] = item;
+                  contexto.fillStyle="black";
+                  contexto.fillRect(x*50,y*50,50,50);
+               });
+               document.getElementById("myCanvas").removeEventListener("contextmenu", direito);
+               document.getElementById("myCanvas").removeEventListener("click", selecionar);
+               vitoria (false);
+            }else{
+               contexto.fillStyle="grey";
+               contexto.fillRect(x*50,y*50,50,50);
+               contexto.beginPath();
+               contexto.rect(x*50,y*50, 50, 50);
+               contexto.stroke();
+               var cont = 0
+               for (var i =0; i < 3; i++){
+                  for (var j =0; j < 3; j++){
+                        if ((i==j) && (j==1)) continue;
+                        [ver,pos]= verificar_lista(x+i-1,y+j-1, bombas);
+                        if(ver)cont++;
+                  }
+               }
+               contexto.fillStyle="black";
+               contexto.font = "20px Georgia";
+               contexto.textAlign = "center";
+               contexto.fillText(cont, (x*50)+25, (y*50)+25);
+            }
+         };
+         //botão direito
+         function direito(evento){
+            evento.preventDefault();
+            var x= Math.floor(evento.offsetX/50);
+            var y= Math.floor(evento.offsetY/50);
+            if (x > colunas-1) return;
+            if (y > linhas-1) return;
+            var [resultado,pos] = verificar_lista(x,y,bandeiras);
+            var cont = 0;
+            if (resultado){
+               contexto.fillStyle="white";
+               contexto.fillRect(x*50,y*50,50,50);
+               bandeiras.splice(pos,1);
+               contexto.beginPath();
+               contexto.rect(x*50,y*50, 50, 50);
+               contexto.stroke();
+            }else{
+               contexto.fillStyle="blue";
+               contexto.fillRect(x*50,y*50,50,50);
+               bandeiras.push([x,y]);
+               contexto.beginPath();
+               contexto.rect(x*50,y*50, 50, 50);
+               contexto.stroke();
+            }
+            if (bandeiras.length == bombas.length){
+               for (var i=0; i < bandeiras.length; i++){
+                  [x,y]=bandeiras[i];
+                  [resultado,pos] = verificar_lista (x,y, bombas);
+                  if (resultado)
+                     cont++;
+               }
+               if (cont == bombas.length){
+                  document.getElementById("myCanvas").removeEventListener("contextmenu", direito);
+               document.getElementById("myCanvas").removeEventListener("click", selecionar);
+                  vitoria (true);
+               }
+            }
+         }
+
+
+         function verificar_lista(x, y, lista){
+            var xb;
+            var yb;
+            for (var i=0;i < lista.length; i++){
+               [xb, yb] = lista[i];
+               if((x==xb) && ( y==yb)){
+                  return [true, i];
+               }
+            }
+            return [false, -1];
+         }
+
+         //Canvas Final
+         function vitoria (resultado){
+            cntx.font = "70px Georgia";
+            cntx.textAlign = "center";
+            if (resultado){
+               cntx.strokeText("Vitória",250,50);
+            }else{
+               cntx.strokeText("Derrota",250,50);
+            }
+         }
+
+         //Canvas Inicial
+         var titulo = document.getElementById("titulo");
+         var cnt = titulo.getContext("2d");
+         cnt.font = "70px Georgia";
+         cnt.textAlign = "center";
+         cnt.strokeText("Campo Minado",250,70);
+      </script>
+   </body>
+</html>
