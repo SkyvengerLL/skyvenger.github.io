@@ -81,7 +81,7 @@
 
          //função de gerar bombas prescisa de ter no mínimo 1 antes
          function gerando_bombas(bombas){
-         var [x,y] = [Math.floor(Math.random() *10), Math.floor(Math.random() *10)];
+         var [x,y] = [Math.floor(Math.random() *numBombas), Math.floor(Math.random() *numBombas)];
          [ver,num] = verificar_lista(x,y, bombas)
          if(!ver){
                bombas.push([x,y]);
