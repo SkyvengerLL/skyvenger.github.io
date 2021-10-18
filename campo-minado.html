@@ -70,9 +70,9 @@
                }
             }
             
-            bombas.push([Math.floor(Math.random() *10), Math.floor(Math.random() *10)])
+            bombas.push([Math.floor(Math.random() *numBombas), Math.floor(Math.random() *numBombas)])
             for(k=0;k <numBombas-1; k++){
-               gerando_bombas(bombas);
+               gerando_bombas(bombas,linhas.value, colunas.value);
             }
             
             lin=linhas.value;
@@ -85,8 +85,8 @@
 
 
          //função de gerar bombas prescisa de ter no mínimo 1 antes
-         function gerando_bombas(bombas){
-         var [x,y] = [Math.floor(Math.random() *numBombas), Math.floor(Math.random() *numBombas)];
+         function gerando_bombas(bombas, lin, col){
+         var [x,y] = [Math.floor(Math.random() *col), Math.floor(Math.random() *lin)];
          [ver,num] = verificar_lista(x,y, bombas)
          if(!ver){
                bombas.push([x,y]);
