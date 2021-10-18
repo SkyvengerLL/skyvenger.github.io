@@ -70,7 +70,7 @@
                }
             }
             
-            bombas.push([Math.floor(Math.random() *numBombas), Math.floor(Math.random() *numBombas)])
+            bombas.push([Math.floor(Math.random() *colunas.value), Math.floor(Math.random() *linhas.value)])
             for(k=0;k <numBombas-1; k++){
                gerando_bombas(bombas,linhas.value, colunas.value);
             }
@@ -86,13 +86,14 @@
 
          //função de gerar bombas prescisa de ter no mínimo 1 antes
          function gerando_bombas(bombas, lin, col){
-         var [x,y] = [Math.floor(Math.random() *lin), Math.floor(Math.random() *col)];
-         [ver,num] = verificar_lista(x,y, bombas)
-         if(!ver){
-               bombas.push([x,y]);
-         }else{
-               gerando_bombas(bombas);
-            }
+            console.log([lin,col]);
+            var [x,y] = [Math.floor(Math.random() *col), Math.floor(Math.random() *lin)];
+            [ver,num] = verificar_lista(x,y, bombas)
+            if(!ver){
+                  bombas.push([x,y]);
+            }else{
+                  gerando_bombas(bombas);
+               }
          }
 
          //eventos de clique
