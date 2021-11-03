@@ -1,0 +1,99 @@
+body{
+   background-color: #181616;
+}
+
+header{
+   display:flex;
+   background-color: #181616;
+   width: 100%;
+   top: 0;
+   position: fixed;
+   height: max-content;
+   margin-left: 2em;
+}
+
+section{
+   background-color: antiquewhite;
+   width: 85%;
+   padding: 3em;
+   margin: 2em;
+   display: flex;
+   flex-wrap:wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+.botoes-falsos{
+   background-color: antiquewhite;
+   height: auto;
+   font-size: 1.4em;
+   border-style: solid solid none solid;
+   border-color: #181616;
+   border-width: 0.5em;
+   align-items: flex-start;
+}
+
+.botoes-falsos a{
+   font-family: Verdana, sans-serif;
+   font-style: bold;
+   color: #181616;
+   text-decoration: none;
+}
+
+.botoes-falsos a:hover {
+   color: antiquewhite;
+   background-color: #181616;
+ }
+
+ .apresentacao{
+   margin: 2em;
+   justify-content: center;
+ }
+
+ .apresentacao h1{
+   font-family: Verdana, sans-serif;
+   font-style: bold;
+   color: #181616;
+ }
+
+ .apresentacao h1 strong{
+   color: rgb(48, 34, 165);
+ }
+
+ .apresentacao h4{
+   color: gray;
+ }
+
+ .apresentacao p{
+   font-family: Verdana, sans-serif;
+   color: #181616;
+ }
+
+ .apresentacao ul{
+   font-family: Verdana, sans-serif;
+   color: #181616;
+ }
+
+ .apresentacao a{
+   font-family: Verdana, sans-serif;
+   color: #181616;
+   text-decoration: none;
+ }
+
+.experiencia{
+   font-family: Verdana, sans-serif;
+   color: #181616;
+   text-decoration: none;
+}
+
+ .experiencia h1{
+   width: 100%;
+   justify-self: center;
+ }
+
+ .experiencia div{
+    width: 40%;
+    height: 15em;
+    border-style: outset;
+    margin: 1em
+ }
