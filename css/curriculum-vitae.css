@@ -13,7 +13,7 @@ header{
 }
 
 section{
-   background-color: antiquewhite;
+   background-color: #f2f2f2;
    width: 85%;
    padding: 3em;
    margin: 2em;
@@ -24,7 +24,7 @@ section{
 }
 
 .botoes-falsos{
-   background-color: antiquewhite;
+   background-color: #f2f2f2;
    height: auto;
    font-size: 1.4em;
    border-style: solid solid none solid;
@@ -41,13 +41,19 @@ section{
 }
 
 .botoes-falsos a:hover {
-   color: antiquewhite;
+   color: #f2f2f2;
    background-color: #181616;
  }
 
  .apresentacao{
    margin: 2em;
    justify-content: center;
+ }
+
+ .apresentacao img{
+   border-radius: 30%;
+   border-style: solid;
+   border-width: 0.1em;
  }
 
  .apresentacao h1{
