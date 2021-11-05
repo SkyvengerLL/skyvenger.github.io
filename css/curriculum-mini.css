@@ -1,0 +1,137 @@
+@media only screen and (max-width: 680px) {
+   header{
+      width: 100%;
+      top: 0;
+      position: fixed;
+      height: max-content;
+      align-items: center;
+      font-size: 3em;
+   }
+
+   section{
+      width: 100%;
+      margin: auto;
+      margin-bottom: 2em;
+   }
+
+   h1{
+      font-size: 4em;
+   }
+
+   .botoes{
+      box-shadow: 10px 5px 5px #cc4500;
+      width: 30%;
+      min-width: 1em;
+      border-radius: 10%;
+      border: solid #331900;
+      padding: 0.5em;
+      overflow: hidden;
+   }
+
+   section#principal{
+      box-shadow: 1em 0.5em 0.5em #1e0f00;
+      border-style: solid;
+      border-color: #331900;
+      margin-top: 2em;
+   }
+   .cartao{
+      margin-top: 2em;
+      margin-left: 3em;
+      width: 45%;
+   }
+
+   .cartao h1{
+      font-size: 2em;
+      margin: 0%;
+      padding: 0%;
+   }
+
+   .imagem{
+      border: none;
+   }
+
+   .icon-bar {
+      display: none;
+   }
+   .experiencia div{
+      width: 75%;
+      height: 15em;
+      border-width: 0.75em;
+      margin: 1em;
+      box-shadow: 1em 0.5em 0.5em #331900;
+      overflow-y: scroll;
+   }
+
+   .experiencia div::-webkit-scrollbar{
+      display: none;
+    }
+
+   .habilidades div{
+      width: 45%;
+      height: 10em;
+      border-width: 0.75em;
+      margin: 1em;
+      box-shadow: 10px 5px 5px #331900;
+      overflow-y: scroll;
+   }
+
+   .habilidades div::-webkit-scrollbar{
+      display: none;
+   }
+
+   progress {
+      display: flex;
+      width:80%;
+      padding:15px 0 0 0;
+      margin:10%;
+      background:none;
+      border: 0;
+      border-radius: 5%;
+      text-align: center;
+      position:relative;
+   }
+
+   progress::-webkit-progress-bar {
+      height:1.5em;
+      margin:0 auto;
+      background-color: #663300;
+      border-radius: 5%;
+      box-shadow: 0px 0px 6px #331900;
+   }
+
+   progress::-webkit-progress-value {
+      height:1.5em;
+      float: left;
+      margin:0px -10px 0 0;
+      background: #cc4500;
+      border-radius: 5%;
+   }
+
+   .interesse{
+      border: solid #cc4500;
+      padding-bottom: 2em;
+      box-shadow: 0px 0px 6px #663300 inset;
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .postite{
+      border: solid #cc4500;
+      box-shadow: 10px 10px 10px #331900;
+      margin: auto;
+      -ms-transform: rotate(7deg);
+      -webkit-transform: rotate(7deg);
+      transform: rotate(7deg);
+      width: 45%;
+      height: auto;
+      padding: auto;
+   }
+
+   .postite > div{
+      border: 0.5em #331900;
+      border-radius: 50%;
+      background-color: #663300;
+      height: 1em;
+      width: 1em;
+   }
+}

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+   padding: 0%;
+   margin: 0%;
+   background-color: #331900;
+}
+
+header{
+   display: flex;
+   background-color: #331900;
+}
+
+section{
+   color: #331900;
+   background-color: #ffc300;
+   display: flex;
+   flex-wrap: wrap;
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+}
+
+.barra ul{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.barra li{
+   list-style: none;
+}
+
+a{
+   color: #331900;
+   text-decoration: none;
+}
+
+.botoes{
+   background-color: #331900;
+   display: inline-flex;
+}
+
+.botoes a{
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+   color: #ffc300;
+}
+
+.botoes a:hover{
+   background-color: #ffc300;
+   color: #331900;
+}
+
+.cartao{
+   color: #331900;
+   justify-content: center;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+.cartao h1{
+   font-family: 'Mukta', sans-serif;
+   font-weight: bold;
+   align-self: flex-start;
+}
+
+.cartao h1 strong{
+   color: #845b32;
+}
+
+.cartao h4{
+   font-family: 'Mukta', sans-serif;
+   color: #cc4500;
+   align-self: flex-start;
+ }
+
+ .cartao td:nth-child(odd) {
+   font-weight: bold;
+ }
+
+ .experiencia{
+   font-family: 'Ubuntu', sans-serif;
+   text-decoration: none;
+}
+
+.experiencia h1{
+   width: 100%;
+   align-self: center;
+   justify-self: center;
+   color: #cc4500;
+}
+
+.experiencia div{
+   border-style: groove;
+   border-color: #663300;
+}
+
+.habilidades{
+   font-family: 'Ubuntu', sans-serif;
+   text-decoration: none;
+}
+
+.habilidades h1{
+   width: 100%;
+   align-self: center;
+   justify-self: center;
+   color: #cc4500;
+ }
+
+ .habilidades div{
+   border-style: outset;
+   border-color: #663300;
+ }
+
+ .interesse h1{
+   width: 100%;
+   align-self: center;
+   justify-self: center;
+   color: #cc4500;
+}

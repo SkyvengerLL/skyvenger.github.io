@@ -1,0 +1,169 @@
+@media only screen and (min-width: 680px) {
+   header{
+      width: 100%;
+      top: 0;
+      position: fixed;
+      height: max-content;
+      align-items: center;
+      font-size: 3em;
+   }
+
+   .botoes{
+      box-shadow: 10px 5px 5px #cc4500;
+      width: 20%;
+      min-width: 5em;
+      border-radius: 10%;
+      border: solid #331900;
+      padding: 0.5em;
+      overflow: hidden;
+   }
+
+   section{
+      width: 80%;
+      margin: auto;
+      margin-bottom: 2em;
+   }
+
+   h1{
+      font-size: 4em;
+   }
+
+   section#principal{
+      display: flex;
+      box-shadow: 1em 0.5em 0.5em #1e0f00;
+      border-style: solid;
+      border-color: #331900;
+      justify-content: space-around;
+      margin-top: 2em;
+      padding-bottom: 3em;
+   }
+
+   img{
+      border: 0.25em solid #331900;
+      border-radius: 25px;
+      margin-bottom: 1em;
+   }
+
+   .cartao{
+      display: flex;
+      margin-top: 2em;
+      width: 45%;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .cartao h1{
+      font-size: 2em;
+      margin: 0%;
+      padding: 0%;
+   }
+
+   .imagem{
+      border-right: solid;
+      align-self: center;
+   }
+
+   .icon-bar {
+      position: fixed;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background-color: #ffc300;
+   }
+   .icon-bar a {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      transition: all 0.3s ease;
+      color: #331900;
+      font-size: 20px;
+   }
+   .icon-bar a:hover {
+      background-color: #331900;
+      color: #ffc300;
+    }
+
+   .experiencia div{
+      width: 40%;
+      height: 15em;
+      border-width: 0.75em;
+      margin: 1em;
+      box-shadow: 1em 0.5em 0.5em #331900;
+      overflow-y: scroll;
+   }
+
+   .experiencia div::-webkit-scrollbar{
+      display: none;
+    }
+
+   .habilidades div{
+      width: 25%;
+      height: 10em;
+      border-width: 0.75em;
+      margin: 1em;
+      box-shadow: 10px 5px 5px #331900;
+      overflow-y: scroll;
+   }
+
+   .habilidades div::-webkit-scrollbar{
+      display: none;
+   }
+
+   progress {
+      display: flex;
+      width:80%;
+      padding:15px 0 0 0;
+      margin:10%;
+      background:none;
+      border: 0;
+      border-radius: 5%;
+      text-align: center;
+      position:relative;
+   }
+
+   progress::-webkit-progress-bar {
+      height:1.5em;
+      margin:0 auto;
+      background-color: #663300;
+      border-radius: 5%;
+      box-shadow: 0px 0px 6px #331900;
+   }
+
+   progress::-webkit-progress-value {
+      height:1.5em;
+      float: left;
+      margin:0px -10px 0 0;
+      background: #cc4500;
+      border-radius: 5%;
+   }
+
+   .interesse{
+      border: solid #cc4500;
+      padding-bottom: 2em;
+      box-shadow: 0px 0px 6px #663300 inset;
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .postite{
+      border: solid #cc4500;
+      box-shadow: 10px 10px 10px #331900;
+      margin: auto;
+      margin-bottom: 3em;
+      -ms-transform: rotate(7deg); /* IE 9 */
+      -webkit-transform: rotate(7deg); /* Safari */
+      transform: rotate(7deg);
+      width: 20%;
+      height: auto;
+      padding: auto;
+   }
+
+   .postite > div{
+      border: 0.5em #331900;
+      border-radius: 50%;
+      background-color: #663300;
+      height: 1em;
+      width: 1em;
+   }
+}
