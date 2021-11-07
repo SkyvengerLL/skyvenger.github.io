@@ -1,0 +1,116 @@
+.colour-black{
+   color:#020202; 
+}
+
+.colour-dark-gray{
+   color: #141414;
+}
+
+.colour-gray{
+   color: #1a1919;
+}
+
+.colour-white{
+   color: #eee6e6;
+}
+
+.colour-ligth-gray{
+   color: #9c9696;
+}
+
+
+/* começo da estilização do header */
+header{
+   width: 100%;
+   background-color: #1414149c;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+}
+
+
+ul{
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+}
+
+li{
+   margin: auto;
+   width: 10em;
+   height: auto;
+   align-self: center;
+   justify-self: center;
+}
+
+/* fim da estilização do header */
+
+a{
+   color: #9c9696;
+}
+
+a:hover{
+   color: #eee6e6;
+}
+
+
+body{
+   margin: 0px;
+   padding: 0px;
+   overflow: auto;
+}
+
+
+/* começo da estilização dos sections */
+
+section#titulo{
+   background: url("../imagens/floresta.webp") no-repeat;
+   width: 100%;
+   background-size: 100% 100%;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-items: center;
+   padding-top: 10%;
+   color: #eee6e6;
+}
+
+section#lancamentos{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-items: center;
+   height: 100%;
+}
+
+
+/* fim da estilização dos sections */
+
+
+/* começo da estilização do footer */
+
+footer{
+   margin: 0px;
+   display: flex;
+   background-color: #1a1919;
+   color: #9c9696;
+   flex-flow: column;
+   width: 100%;
+   align-items: center;
+   box-shadow: #020202;
+}
+
+footer div{
+   margin-bottom: 1em;
+   justify-content: center;
+   text-align: center;
+   font-weight: bold;
+}
+
+
+footer a:hover{
+   color: #9c9696;
+}
+
+/*  Fim da estilização do footer */
