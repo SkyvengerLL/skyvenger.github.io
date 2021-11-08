@@ -3,20 +3,21 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
       <link rel="stylesheet" href="css/base.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
    </head>
    <body>
       <header>
          <span style="margin-left: 5%;">
-            <a><span style="color: #9c9696;">O</span><span style="color: #eee6e6;">POLONORTE</span></a>
+            <a href="#titulo" style="font-size: 1.4em; font-family: sans-serif; font-weight: bold;"><span style="color: #9c9696;">O</span><span style="color: #eee6e6;">POLONORTE</span></a>
          </span>
          <span>
             <nav>
-               <ul>
-                  <li><a>HOME</a></li>
-                  <li><a>LOJA</a></li>
-                  <li><a>QUEM SOMOS</a></li>
-                  <li><a>CONTATO</a></li>
-                  <li><a><svg width="30%" heigth="30%" viewBox="0 0 25 20" style="fill: #9c9696;">
+               <ul style="font-family: sans-serif; font-size: 0.9em; font-weight: bold;">
+                  <li><a href="#titulo" class="invertido">HOME</a></li>
+                  <li><a href="loja.html" class="invertido">LOJA</a></li>
+                  <li><a href="#sobre-nos" class="invertido">QUEM SOMOS</a></li>
+                  <li><a href="#contato" class="invertido">CONTATO</a></li>
+                  <li><a class="invertido"><svg width="30%" heigth="30%" viewBox="0 0 25 20" style="fill: #9c9696;">
                      <rect x="0" y="5" width="17.5" height="0.75" />
                      <path d="M 1 5.25 3.75 13.75 13.75 13.75 16.5 5.25" stroke="#9c9696" stroke-width="0.75" fill="none" />
                      <rect x="5.75" y="7.5" width="1.75" height="1.25" />
@@ -45,20 +46,138 @@
             </div>
          </section>
          <section id="lancamentos">
-            <span style="background-color:#020202; width: 50%;">
+            <span class="lancamento">
                <h4>LANÇAMENTOS</h4>
-               <h6>COMPRAR</h6>
+               <h6><a href="loja.html">COMPRAR</a></h6>
             </span>
-            <span style="width: 50%; height: 100%;">
+            <span style="width: 50%;">
                <picture>
-                  <img src="bolsa-pagina-principal.webp" alt="bolsa exemplo" width="100%" height="100%" />
+                  <img src="imagens/bolsa-pagina-principal.webp" alt="bolsa exemplo" style="object-fit: cover;" />
                </picture>
             </span>
          </section>
+         <section id="tiposProdutos">
+            <button class="tiposProdutos" style="background: url('imagens/mochila-home.PNG') no-repeat;">
+               <p>MOCHILA</p>
+            </button>
+            <button class="tiposProdutos" style="background: url('imagens/mochila-de-carga-home.PNG') no-repeat; ">
+               <p>MOCHILA DE CARGA</p>
+            </button>
+            <button class="tiposProdutos" style="background: url('imagens/mochila-de-viagem-home.PNG') no-repeat;">
+               <p>MOCHILA DE VIAGEM</p>
+            </button>
+         </section>
+         <section id="liquidacao">
+            <div class="liquidacao-titulo">
+               <h4>LIQUIDAÇÃO</h4>
+               <h6>ATÉ 50% DE DESCONTO</h6>
+            </div>
+            <div>
+               <button class="botoes-de-liquidacao">
+                  <div>
+                     <picture>
+                        <img src="imagens/produtos/mochila-vintage.webp" alt="Mochila Vintage">
+                     </picture>
+                  </div>
+                  <div class="parte-de-baixo">
+                     <div class="mostra">
+                        <div>
+                           <p>MOCHILA VINTAGE</p>
+                        </div>
+                        <div>
+                           <span style="text-decoration: line-through;">₪75.00</span>
+                           <span>₪67.50</span>
+                        </div>
+                     </div>
+                     <div class="sobre">
+                        <h1>VIEW DETAILS</h1>
+                     </div>
+                  </div>
+               </button>
+               <button class="botoes-de-liquidacao">
+                  <div>
+                     <picture>
+                        <img src="imagens/produtos/mochila-de-carga.webp" alt="Mochila Vintage">
+                     </picture>
+                  </div>
+                  <div class="parte-de-baixo">
+                     <div class="mostra">
+                        <div>
+                           <p>MOCHILA DE CARGA</p>
+                        </div>
+                        <div>
+                           <span style="text-decoration: line-through;">₪130.00</span>
+                           <span>₪104.00</span>
+                        </div>
+                     </div>
+                     <div class="sobre">
+                        <h1>Ver Informações</h1>
+                     </div>
+                  </div>
+               </button>
+               <button class="botoes-de-liquidacao">
+                  <div>
+                     <picture>
+                        <img src="imagens/produtos/mochila-de-camuflagem.webp" alt="Mochila Camuflage" />
+                     </picture>
+                  </div>
+                  <div class="parte-de-baixo">
+                     <div class="mostra">
+                        <div>
+                           <p>MOCHILA CAMUFLAGE</p>
+                        </div>
+                        <div>
+                           <span style="text-decoration: line-through;">₪95.00</span>
+                           <span>₪76.00</span>
+                        </div>
+                     </div>
+                     <div class="sobre">
+                        <h1>Ver Informações</h1>
+                     </div>
+                  </div>
+               </button>
+            </div>
+         </section>
+         <section id="sobre-nos">
+            <div class="conteudo">
+               <h4>QUEM SOMOS</h4>
+               <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto. É fácil! Basta clicar em "Editar Texto" ou clicar duas vezes sobre mim e você poderá adicionar o seu próprio conteúdo e trocar fontes. Sou um ótimo lugar para você contar sua história.</p>
+            </div>
+            <div class="vazio"></div>
+         </section>
+         <section id="contato">
+            <div class="formulario">
+               <form action="">
+                  <input type="text" placeholder="Nome" class="estilo-das-caixas-do-form" />
+                  <input type="email" placeholder="Email" class="estilo-das-caixas-do-form" />
+                  <input type="tel" placeholder="Telefone" class="estilo-das-caixas-do-form" />
+                  <textarea class="estilo-das-caixas-do-form" rows="4" placeholder="Digite sua mensagem aqui... "></textarea>
+                  <input type="submit" class="estilo-dos-botoes-de-submicao" />
+               </form>
+            </div>
+            <div class="conteudo">
+               <h4>CONTATO</h4>
+               <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto. É fácil! Basta clicar em "Editar Texto" ou clicar duas vezes sobre mim e você poderá adicionar o seu próprio conteúdo.</p>
+               <p><a>info@meusite.com</a><br />Tel: (11) 3456-7890</p>
+            </div>
+         </section>
+         <section id="assinar">
+            <h4>ASSINE NOSSA LISTA</h4>
+            <h6>E NUNCA PERCA UMA NOVIDADE</h6>
+            <form>
+               <input type="email" placeholder="Insira o seu email aqui*" class="estilo-das-caixas-do-form" style="width: 70%; background-color: #02020200; color: #eee6e6;" />
+               <button class="estilo-dos-botoes-de-submicao">Participar</button>
+            </form>
+         </section>
       </main>
       <footer>
-         <div>© 2023 por OPOLONORTE. Orgulhosamente criado com <a style="text-decoration: underline;">Winx.com</a>.</div>
+         <div>© 2023 por OPOLONORTE. Orgulhosamente criado com <a style="text-decoration: underline; color: #9c9696;">Winx.com</a>.</div>
          <div>OPOLONORTE Ltda. - CPF/CNPJ: 12.345.678/0000-01 - Av. Bernardino de Campos, 98 São Paulo, SP 12345-678 - <br />info@meusite.com -  Telefone: (11) 3456-7890</div>
       </footer>
+      <div class="barra-de-icones">
+         <a href="#"><i class="fa fa-facebook"></i></a> 
+         <a href="#"><i class="fa fa-twitter"></i></a>
+         <a href="#"><i class="fa fa-instagram"></i></a> 
+      </div>
    </body>
 </html>

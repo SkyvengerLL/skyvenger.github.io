@@ -29,7 +29,6 @@ header{
    position: fixed;
 }
 
-
 ul{
    display: flex;
    flex-direction: row;
@@ -46,14 +45,22 @@ li{
 
 /* fim da estilização do header */
 
-a{
+a.invertido{
    color: #9c9696;
 }
 
-a:hover{
+a.invertido:hover{
    color: #eee6e6;
 }
 
+a{
+   text-decoration: none;
+   color: #eee6e6;
+}
+
+a:hover{
+   color: #9c9696;
+}
 
 body{
    margin: 0px;
@@ -61,13 +68,76 @@ body{
    overflow: auto;
 }
 
+h3{
+   font: normal;
+   font-size: 3em; 
+   font-family: sans-serif;
+   letter-spacing: 0.05em;
+   line-height: 0%;
+}
+
+h4{
+   color: #eee6e6;
+   font: normal;
+   font-size: 3em; 
+   font-family: sans-serif;
+   letter-spacing: 0.05em;
+   line-height: 2%;
+}
+
+h6{
+   color: #eee6e6;
+   font: normal;
+   font-size: 1.5em; 
+   letter-spacing: 0.05em;
+   line-height: 2%;
+   font-weight: bold;
+}
+
+p{
+   color: #eee6e6;
+   font: normal;
+   font-size: 1.5em; 
+   font-family: sans-serif;
+   letter-spacing: 0.05em;
+}
+
+/* Forms*/
+
+.estilo-das-caixas-do-form{
+   background-color: #eee6e6;
+   color: #020202;
+   width: 100%; 
+   margin: 0.1em; 
+   font: normal; 
+   font-size: 1.2em;
+   font-family: sans-serif; 
+   letter-spacing: 0.05em;
+   padding: 0.3em;
+   border-style: solid;
+   border-color: #eee6e6;
+}
+
+.estilo-dos-botoes-de-submicao{
+   align-self: flex-end;
+   font: normal;
+   font-size: 1em;
+   font-family: sans-serif;
+   font-weight: bold;
+   letter-spacing: 0.05em;
+   background-color: #02020200;
+   color: #eee6e6;
+   padding: 1.5% 5%;
+   border-style: solid;
+   border-color: #eee6e6;
+}
 
 /* começo da estilização dos sections */
 
 section#titulo{
    background: url("../imagens/floresta.webp") no-repeat;
    width: 100%;
-   background-size: 100% 100%;
+   background-size: cover;
    display: flex;
    flex-flow: column;
    align-items: center;
@@ -82,8 +152,155 @@ section#lancamentos{
    align-items: center;
    justify-items: center;
    height: 100%;
+   padding: 0%;
+   margin: 0%;
+   background-color:#020202;
 }
 
+.lancamento{
+   display: flex;
+   flex-direction: column; 
+   width: 50%; 
+   height: 100%; 
+   align-items: center; 
+   justify-items: center;
+}
+
+section#tiposProdutos{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-items: center;
+   height: 100%;
+}
+
+.tiposProdutos{
+   background-size: auto;
+   height: 33em;
+   flex: 1;
+   align-items: center;
+   justify-items: center;
+   border: none;
+}
+
+.tiposProdutos p{
+   visibility: hidden;
+   color: #eee6e6;
+}
+
+button.tiposProdutos:hover{
+   filter: brightness(50%);
+}
+
+button.tiposProdutos:hover p{
+   visibility: visible;
+}
+
+section#liquidacao{
+   background-color:#020202;
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-items: center;
+   height: 100%;
+   flex-direction: column;
+}
+
+.liquidacao-titulo{
+   text-align: center;
+   width: 100%;
+}
+
+.botoes-de-liquidacao{
+   border: none;
+   color: #eee6e6;
+   background-color:#020202;
+}
+
+.parte-de-baixo{
+   background-color:#020202;
+   width: 100%;
+   height: 100%;
+}
+
+button.botoes-de-liquidacao:hover .parte-de-baixo{
+   background-color: #9c9696;
+}
+
+.mostra{
+   visibility: visible;
+   width: 100%;
+   height: 100%;
+}
+
+button.botoes-de-liquidacao:hover .mostra{
+   visibility: hidden;
+}
+
+.sobre{
+   visibility: hidden;
+   width: 100%;
+   height: 100%;
+}
+
+button.botoes-de-liquidacao:hover .sobre{
+   visibility: visible;
+}
+
+section#sobre-nos{
+   background: url("../imagens/cara-acampanhando.webp") no-repeat;
+   width: 100%;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   color: #eee6e6;
+}
+
+.conteudo{
+   background-color:#02020280;
+   width: 30%;
+   height: 100%;
+   padding: 10%;
+}
+.vazio{
+   width: 50%;
+   height: 100%;
+}
+
+section#contato{
+   background-color:#020202;
+   width: 100%;
+   background-size: cover;
+   display: flex;
+   color: #eee6e6;
+}
+
+.formulario{
+   width: 30%;
+   padding: 10%;
+   padding-top: 15%;
+}
+.formulario form{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-items: center;
+}
+
+section#assinar{
+   background-color: #141414;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-items: center;
+   width: 90%;
+   padding: 5%;
+}
+
+section#assinar form{
+   width: 50%;
+}
 
 /* fim da estilização dos sections */
 
@@ -98,7 +315,7 @@ footer{
    flex-flow: column;
    width: 100%;
    align-items: center;
-   box-shadow: #020202;
+   box-shadow: 4em 4em 3em #020202;
 }
 
 footer div{
@@ -114,3 +331,23 @@ footer a:hover{
 }
 
 /*  Fim da estilização do footer */
+
+/* Inicio da estilização da barra de icones */
+
+.barra-de-icones {
+   position: fixed;
+   float: right;
+   top: 30%;
+   right: 0%;
+   background-color: #02020285;
+}
+
+.barra-de-icones a {
+   display: block;
+   text-align: center;
+   padding: 0.9em;
+   color: #eee6e6;
+   font-size: 1.8em;
+}
+
+/* Fim da estilização da barra de icones */
