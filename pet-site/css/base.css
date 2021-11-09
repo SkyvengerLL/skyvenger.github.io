@@ -1,0 +1,293 @@
+/* importes de fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* cores de referência */
+.color-white{
+   color: #ffffff;
+}
+.color-grey{
+   color: #eeeeee;
+}
+.color-blue{
+   color: #28add1;
+}
+.color-orange{
+   color: #f56a56;
+}
+.color-vermelho{
+   color: #ed543f;
+}
+.color-black{
+   color: #000000;
+}
+.color-grey-dark{
+   color: #626262;
+}
+
+/* Estilização de página */
+
+body{
+   margin: 0%;
+}
+
+p{
+   font-size: 1em;
+   font-weight: normal;
+   font-family: 'Open Sans', sans-serif;
+}
+
+a{
+   color: #000000;
+   text-decoration: none;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+/* Estilização do cabeçario */
+
+header{
+   width: 100%;
+   position: fixed;
+}
+
+div#ligue{
+   display: flex;
+   flex-direction: row-reverse;
+   padding-right: 20%;
+   height: 5%;
+   color: #f56a56;
+   background-color: #eeeeeef5;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 0.8em;
+}
+
+div#logo a{
+   font-size: 2em;
+}
+
+div#navegacao{
+   display: flex;
+   flex-flow: row;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #fffffff5;
+   color:#626262;
+   font-family: 'Raleway', sans-serif;
+   padding: 1em;
+}
+
+div#navegacao ul{
+   display: flex;
+   flex-flow: row;
+   list-style: none;
+   font-size: 0.8em;
+}
+
+div#navegacao li{
+   margin: 1em;
+   width: auto;
+   height: auto;
+   align-self: center;
+   justify-self: center;
+}
+
+div#navegacao li a:hover{
+   color: #28add1;
+}
+
+/* Estilização das seções */
+
+/* Em comum */
+
+section{
+   display: flex;
+   width: 100%;
+}
+
+.esquerda-da-pagina{
+   width: 20%;
+   padding-top: 2.5%;
+   padding-left: 10%;
+   padding-bottom: 30%;
+}
+
+.esquerda-da-pagina h2{
+   font-family: 'Raleway', sans-serif;
+   font-size: 3em;
+   font-weight: normal;
+}
+
+.esquerda-da-pagina p{
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1em;
+}
+
+.direita-da-pagina{
+   padding-left: 10%;
+   padding-top: 5%;
+   width: 60%
+}
+
+h6{
+   font-size: 1.4em;
+   font-weight: normal;
+   font-family: 'Open Sans', sans-serif;
+   margin: 0%;
+   color: #626262;
+}
+
+/* Seção do banner */
+
+section#baner{
+   background-color: #ffffff;
+}
+div#foto{
+   margin-top: 10%;
+   width: 100%;
+   background: url("../imagens/gato-1.webp") no-repeat;
+   background-size: 100% 100%;
+   display: flex;
+}
+/* Seção de Serviços */
+section#servicos .direita-da-pagina{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.servico{
+   display: flex;
+   flex-flow: row;
+   margin-right: 10%;
+   margin-bottom: 5%;
+   width: 35%;
+}
+
+.seta{
+   justify-self: center;
+   align-self: flex-start;
+}
+
+/* Seção sobre a clinica */
+
+section#sobre{
+   background: url("../imagens/blue-background.webp") no-repeat;
+   background-size: 100% 100%;
+   color: #ffffff;
+}
+
+/* Seção sobre Contato */
+
+.info{
+   display: flex;
+   margin: 5%;
+}
+
+/* google maps */
+
+.mapouter{
+   text-align:right;
+   height:200px;
+   width:600px;
+}
+
+.gmap_canvas {
+   overflow:hidden;
+   background:none!important;
+   height:200px;
+   width:600px;
+}
+
+/* formulário */
+.formulario{
+   margin-top: 5%;
+   margin-bottom: 10%;
+}
+
+.formulario .organizacao-do-formulario{
+   display: flex;
+}
+
+.formulario form{
+   display: flex;
+   flex-direction: column;
+}
+
+.estilo-das-caixas-do-form{
+   background-color: #ffffff;
+   color: #020202;
+   width: auto; 
+   margin: 0.1em; 
+   font: normal; 
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif; 
+   letter-spacing: 0.05em;
+   padding: 0.3em;
+   border: none;
+}
+
+.estilo-das-caixas-do-form:hover{
+   border: 0.05em solid #28add1;
+}
+
+.estilo-dos-botoes-de-submicao{
+   align-self: flex-end;
+   font: normal;
+   font-size: 0.9em;
+   font-family: 'Open Sans', sans-serif;
+   letter-spacing: 0.05em;
+   background-color: #f56a56;
+   color: #ffffff;
+   padding: 1% 5%;
+   margin-right: 28.5%;
+   border: none;
+}
+
+/* Estilização do footer */
+
+div#para-o-topo{
+   text-align: center;
+}
+
+div#informacao-extra{
+   display: flex;
+   margin-left: 10%;
+   margin-right: 10%;
+   justify-content: space-between;
+}
+
+div#informacao-extra{
+   font-size: 0.6;
+   font-family: 'Open Sans', sans-serif;
+}
+
+#facebook{
+   background-color: #3d5a98;
+   color: #ffffff;
+   padding: 0.1em;
+   width: 0.9em;
+   height: 1em;
+}
+
+#twitter{
+   background-color: #55aced;
+   color: #ffffff;
+   padding: 0.1em;
+   width: 0.9em;
+   height: 1em;
+}
+
+#botao-de-bot{
+   position: fixed;
+   bottom: 3%;
+   right: 3%;
+   background-color: #f56a56;
+   color: #ffffff;
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.2em;
+   border: none;
+   padding: 0.6em;
+}
