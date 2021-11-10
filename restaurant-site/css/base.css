@@ -1,0 +1,193 @@
+/* importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* Cores de referência */
+.cor-azul{
+   color: #86cccc;
+}
+
+.cor-branco{
+   color: #ffffff;
+}
+
+.cor-maron{
+   color: #6b3b17;
+}
+
+/* Estilização de página */
+body{
+   margin: 0%;
+   background: url("../imagens/coffee-bar-2.jpg") no-repeat center center;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+/* estilização do cabeçario */
+
+header{
+   display: flex;
+   background-color: #86cccc;
+   width: 100%;
+   margin-top: 7%;
+   align-items: center;
+   justify-content: center;
+   padding-top: 0.7em;
+   padding-bottom: 1em;
+}
+
+div#logo{
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+}
+
+h1{
+   color: #ffffff;
+   font-family: 'Niconne', cursive;
+   margin: 0%;
+   font-weight: normal;
+   font-size: 2.5em;
+}
+
+div#navegacao{
+   display: flex;
+   flex-flow: row;
+   align-items: center;
+   color: #ffffff;
+   font-family: 'Overlock SC', cursive;
+}
+
+div#navegacao .menu{
+   display: flex;
+   flex-flow: row;
+   list-style: none;
+   font-size: 0.8em;
+}
+
+div#navegacao .menu li{
+   margin: 1em;
+   width: auto;
+   height: auto;
+   align-self: center;
+   justify-self: center;
+}
+
+div#navegacao .menu li a:hover{
+   color: #6b3b17;
+}
+.selecionado{
+   color: #6b3b17;
+}
+
+#lista-escondida {
+   display: none;
+   position: absolute;
+   background-color: #86cccc;
+   z-index: 1;
+   list-style: none;
+}
+
+#lista-escondida li{
+   font-size: 1em;
+}
+
+.tem-sub-menu:hover #lista-escondida{
+   display: block;
+}
+
+a{
+   cursor: pointer;
+}
+
+/* Estilização da Área Principal */
+main{
+   height: 100%;
+   min-height: 500px;
+}
+
+.cartao{
+   width: 23%;
+   position: relative;
+   right: -65%;
+   margin-top: 5%;
+}
+
+.horarios{
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #ffffff;
+   color: #6b3b17;
+   width: 100%;
+   border: 1px solid #6b3b17;
+   border-bottom: none;
+   font-family: 'Overlock SC', cursive;
+   padding-top: 1em;
+   padding-bottom: 1em;
+}
+
+.linhas{
+   display: flex;
+   width: 70%;
+   align-items: center;
+}
+
+.linhas p{
+   margin-left: 1.5em;
+   margin-right: 1.5em;
+}
+
+.linhas div{
+   border-top: 0.2em solid #86cccc;
+   height: 0.1em;
+   width: 25%;
+}
+
+.linha {
+   width: 70%;
+   border-top: 0.2em solid #86cccc;
+   height: 1em;
+}
+
+.embaixo{
+   background-color: #86cccc;
+   justify-content: space-between;
+   display: flex;
+   width: 80%;
+   padding-left: 10%;
+   padding-right: 10%;
+}
+
+h2{
+   font-size: 1.2em;
+   font-family: 'Overlock SC', cursive;
+   color: #ffffff;
+}
+
+/* Estilização do Rodapé */
+footer{
+   display: flex;
+   flex-direction: column;
+   background-color: #86cccc;
+   width: 100%;
+   margin-top: 7.5%;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 0.2em;
+}
+
+h5{
+   color: #ffffff;
+   font-family: 'Niconne', cursive;
+   margin: 0%;
+   font-weight: normal;
+   font-size: 1.4em;
+}
+
+footer p{
+   color: #ffffff;
+   font-family: 'Overlock SC', cursive;
+   font-size: 0.8em;
+}
