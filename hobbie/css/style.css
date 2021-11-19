@@ -1,0 +1,90 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+/* Estilização de página */
+body{
+   margin: 0%;
+}
+
+ul{
+   list-style-type: none;
+}
+
+/* Estilização de cards */
+
+main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
+   background-color: rgb(17, 15, 15);
+}
+
+.card{
+   background-color: rgb(17, 15, 15);
+   border-bottom: 5px solid rgb(17, 15, 15);
+   padding: 2.5%;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+}
+
+/* me */
+.me{
+   border: 5px solid rgb(210, 236, 236);
+   border-radius: 20px;
+   display: flex;
+   text-align: center;
+   justify-content: space-around;
+   padding: 2.5%;
+   width: 35%;
+}
+.me__title{
+   font-family: 'Anton', sans-serif;
+   font-size: 20px;
+   color: rgb(210, 236, 236);
+   letter-spacing: 0.4em;
+}
+
+.me__text{
+   font-family: 'Prompt', sans-serif;
+   font-size: 20px;
+   color: rgb(210, 236, 236);
+}
+
+/* Hobbie */
+.hobbie{
+   border: 5px solid rgb(17, 15, 15);
+   border-radius: 20px;
+   background-color: rgb(210, 236, 236);
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: space-around;
+   padding: 2.5%;
+   width: 65%;
+}
+
+.hobbie__title{
+   font-family: 'Anton', sans-serif;
+   font-size: 20px;
+   color: rgb(17, 15, 15);
+   letter-spacing: 0.4em;
+}
+
+.hobbie__text{
+   font-family: 'Prompt', sans-serif;
+   font-size: 20px;
+   color: rgb(17, 15, 15);
+}
+
+/* images */
+.images{
+   background-color: rgb(17, 15, 15);
+   display: flex;
+   flex-wrap: wrap;
+}

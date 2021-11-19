@@ -1,0 +1,9 @@
+document.getElementById("name_me").textContent="Fabrício Rodrigues Pereira";
+document.getElementById("age_me").textContent="25 anos de Idade";
+document.getElementById("state_me").textContent="Minas Gerais";
+document.getElementById("name_hobbie").textContent="Jogar RPGs (Role Playing Games)";
+document.getElementById("description_hobbie").textContent="Meu maior hobbie é jogar rpg, gosto muito de escrever histórias e passar tempo com meus amigos. Com rpg eu posso fazer ambos, rir muito de situações inusitadas e como rpg é um jogo cooperativo diminui bastante a possibilidade de brigas deixando, na maior parte do tempo (ninguém é perfeito), um ambiente bom de se estar.";
+//document.getElementById("more_about").textContent = "Clique aqui para mais informações.";
+document.getElementById("some_systems").textContent="Alguns Sistemas de RPG que Jogo:";
+document.getElementById("system_1").textContent="Dungeons and Dragons";
+document.getElementById("system_2").textContent="Genesys";
