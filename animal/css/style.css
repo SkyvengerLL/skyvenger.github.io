@@ -1,0 +1,67 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+/* Estilização de página */
+body{
+   margin: 0%;
+   background-color: rgb(17, 15, 15);
+}
+
+ul{
+   list-style-type: none;
+}
+
+a{
+   font-family: 'Prompt', sans-serif;
+   font-size: 20px;
+   color: rgb(17, 15, 15);
+}
+
+/* Estilização de cards */
+
+main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
+   background-color: rgb(17, 15, 15);
+}
+
+/* Animal */
+.animal{
+   border: 5px solid rgb(17, 15, 15);
+   border-radius: 20px;
+   background-color: #e28743;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: space-around;
+   padding: 2.5%;
+   width: 65%;
+}
+
+.animal__title{
+   font-family: 'Anton', sans-serif;
+   font-size: 20px;
+   color: rgb(17, 15, 15);
+   letter-spacing: 0.4em;
+}
+
+.animal__text{
+   font-family: 'Prompt', sans-serif;
+   font-size: 20px;
+   color: rgb(17, 15, 15);
+}
+
+/* images */
+.images{
+   width: 100%;
+   background-color: rgb(17, 15, 15);
+   display: flex;
+}
+
+.images__image{
+   width: auto;
+   height: 250px;
+}
