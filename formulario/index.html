@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+      <script src="javascript/script.js" defer></script>
+   </head>
+   <body>
+      <header>
+         <span>
+            <div class="logo__1">NICE</div>
+            <div class="logo__2">Costuras</div>
+         </span>
+         <nav>
+            <ul>
+               <li>Início</li>
+               <li>Quem Somos</li>
+               <li>Faça um Pedido</li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <section class="main__visible">
+            <h2>APROVEITE SEU PRODUTO</h2>
+            <p>Agradecemos a preferência. <br />E, por favor, diga-nos como foi sua experiência.</p>
+            <form id="formulario" action="" onsubmit="return false;">
+               <label class="form__label" for="produto">Satisfação com o serviço:</label>
+               <div class="form__radio">
+                  <label class="form__intlabel">Ruim</label>
+                  <input type="radio" name="produto" value="1" />
+                  <input type="radio" name="produto" value="2" />
+                  <input type="radio" name="produto" value="3" />
+                  <input type="radio" name="produto" value="4" />
+                  <input type="radio" name="produto" value="5" />
+                  <input type="radio" name="produto" value="6" />
+                  <input type="radio" name="produto" value="7" />
+                  <input type="radio" name="produto" value="8" />
+                  <input type="radio" name="produto" value="9" />
+                  <input type="radio" name="produto" value="10" />
+                  <label class="form__intlabel">Ótima</label>
+               </div>
+               <label class="form__label" for="tempo">Tempo de entrega:</label>
+               <div class="form__radio">
+                  <label class="form__intlabel">Ruim</label>
+                  <input type="radio" name="tempo" value="1" />
+                  <input type="radio" name="tempo" value="2" />
+                  <input type="radio" name="tempo" value="3" />
+                  <input type="radio" name="tempo" value="4" />
+                  <input type="radio" name="tempo" value="5" />
+                  <input type="radio" name="tempo" value="6" />
+                  <input type="radio" name="tempo" value="7" />
+                  <input type="radio" name="tempo" value="8" />
+                  <input type="radio" name="tempo" value="9" />
+                  <input type="radio" name="tempo" value="10" />
+                  <label class="form__intlabel">Ótima</label>
+               </div>
+               <label class="form__label" for="atendimento">Com o atendimento:</label>
+               <div class="form__radio">
+                  <label class="form__intlabel">Ruim</label>
+                  <input type="radio" name="atendimento" value="1" />
+                  <input type="radio" name="atendimento" value="2" />
+                  <input type="radio" name="atendimento" value="3" />
+                  <input type="radio" name="atendimento" value="4" />
+                  <input type="radio" name="atendimento" value="5" />
+                  <input type="radio" name="atendimento" value="6" />
+                  <input type="radio" name="atendimento" value="7" />
+                  <input type="radio" name="atendimento" value="8" />
+                  <input type="radio" name="atendimento" value="9" />
+                  <input type="radio" name="atendimento" value="10" />
+                  <label class="form__intlabel">Ótima</label>
+               </div>
+               <div class="form__textarea">
+                  <label class="form__label" for="sugestoes">Possui alguma sugestão?</label>
+                  <textarea class="form__boxtextarea" name="sugestoes" cols="30" rows="4" placeholder="Escreva suas sugestões aqui..."></textarea>
+               </div>
+               <input type="submit" class="form__button" onclick="teste()"/>
+            </form>
+         </section>
+         <section class="main__invisible">
+            <h2>APROVEITE SEU PRODUTO</h2>
+            <p>Agradecemos a preferência.<br />E, por favor, diga-nos como foi sua experiência.</p>
+            <div>
+               <h3>OBRIGADO<br />PELO SEU FEEDBACK</h3>
+            </div>
+            <div class="div__resultado">
+               <h3>Sua Avaliação foi:</h3>
+               <p id="av__produto"></p>
+               <p id="av__tempo"></p>
+               <p id="av__atendimento"></p>
+               <p id="av__sugestao"></p>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <p>Todos os direitos reservados @20XX</p>
+      </footer>
+   </body>
+</html>

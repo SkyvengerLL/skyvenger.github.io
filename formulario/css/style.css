@@ -1,0 +1,177 @@
+/* fonts imports */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* pagina */
+body{
+   margin: 0;
+   background-color: rgb(62, 12, 92);
+}
+
+/* header */
+
+header{
+   background-color: rgb(252, 245, 245);
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+header > nav > ul{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+}
+
+header > nav > ul > *{
+   margin: auto;
+   align-self: center;
+   justify-self: center;
+   width: 10rem;
+   padding: 2.5%;
+}
+
+.logo__1{
+   font-family: 'Dancing Script', cursive;
+   color: rgb(62, 12, 92);
+   font-size: 1.5rem;
+}
+
+.logo__2{
+   font-family: 'Roboto', sans-serif;
+   color: rgb(62, 12, 92);
+   font-size: 1.5rem;
+}
+
+/* footer */
+
+footer{
+   background-color: rgb(13, 3, 13);
+   color: rgb(252, 245, 245);
+   bottom: 0;
+   padding-bottom: .25%;
+   text-align: center;
+   margin-top: 0%;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* main */
+
+main{
+   display: block;
+   margin-left: 10%;
+   margin-right: 10%;
+   width: 80%;
+   height: 100%;
+   background-color: rgb(252, 245, 245);
+   padding-bottom: 2%;
+   margin-bottom: 0%;
+}
+
+.main__visible > h2{
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+   text-align: center;
+   font-size: 3rem;
+}
+
+.main__visible > p{
+   font-family: 'Ubuntu', sans-serif;
+   text-align: center;
+   font-size: 2.5rem;
+}
+
+.main__visible > div{
+   background-color: rgb(15, 88, 21);
+   font-family: 'Ubuntu', sans-serif;
+   color: rgb(34, 247, 6);
+   text-align: center;
+   padding: 10%;
+   width: 60%;
+   margin: 10%;
+}
+
+.main__visible > div > h3{
+   font-size: 3rem;
+}
+
+.main__visible > div > p{
+   font-size: 1.5rem;
+}
+
+.main__invisible{
+   display: none;
+}
+
+/* formulario */
+form{
+   margin: 2.5%;
+   border-radius: 15px;
+   border: 0.25em solid rgb(13, 3, 13);
+   padding: 2%;
+   width: 80%;
+   margin: 10%;
+}
+
+.form__radio{
+   display: flex;
+   margin: 2.5%;
+}
+
+.form__radio > * {
+   margin-left: 2.5%;
+   align-self: center;
+}
+
+.form__textarea{
+   display: flex;
+   flex-flow: column;
+}
+
+.form__label{
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+   font-size: 1.5rem;
+   margin-bottom: 3%;
+}
+
+.form__intlabel{
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 1.5rem;
+}
+
+.form__boxtextarea{
+   color: rgb(13, 3, 13);
+   width: 95%;
+   margin-left: 2.5%;
+   margin-right: 2.5%;
+   font-size: 1.5rem;
+   font-family: 'Ubuntu', sans-serif;
+   padding: 0.3em;
+   border-style: solid;
+   border-width: 0.3rem;
+   border-color: rgb(13, 3, 13);
+}
+
+.form__button{
+   background-color: rgb(252, 245, 245);
+   color: rgb(13, 3, 13);
+   margin: 2.5%;
+   font-size: 1.5rem;
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: bold;
+   border-style: solid;
+   border-width: 0.3rem;
+   border-color: rgb(13, 3, 13);
+   padding: .5% 5%;
+}
+
+.form__button:hover{
+   background-color: rgb(13, 3, 13);
+   color: rgb(252, 245, 245);
+   border-color: rgb(252, 245, 245);
+}
