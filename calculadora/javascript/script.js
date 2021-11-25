@@ -48,23 +48,23 @@ document.querySelector('#igual').addEventListener('click', function (){
    }
    if(selecionado.id == 'divisao'){
       if (Number(campo_2.value) == 0){
-         resultado.value = "infinito";
+         resultado.innerHTML = "Infinito";
          return;
       }else{
-         resultado.value = Number(campo_1.value) / Number(campo_2.value);
+         resultado.innerHTML = Number(campo_1.value) / Number(campo_2.value);
          return;
       }
    }
    if(selecionado.id == 'multiplicacao'){
-      resultado.value = Number(campo_1.value) * Number(campo_2.value);
+      resultado.innerHTML = Number(campo_1.value) * Number(campo_2.value);
       return;
    }
    if(selecionado.id == 'subtracao'){
-      resultado.value = Number(campo_1.value) - Number(campo_2.value);
+      resultado.innerHTML = Number(campo_1.value) - Number(campo_2.value);
       return;
    }
    if(selecionado.id == 'adicao'){
-      resultado.value = Number(campo_1.value) + Number(campo_2.value);
+      resultado.innerHTML = Number(campo_1.value) + Number(campo_2.value);
       return;
    }
 });
