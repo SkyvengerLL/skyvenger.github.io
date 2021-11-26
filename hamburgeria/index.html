@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <main>
+         <h1>Cardápio da Hamburgeria da Esquina</h1>
+         <form action="" onsubmit="return false;">
+            <fieldset>
+               <legend>Hamburgues</legend>
+               <section class="form">
+                  <div class="form__conteudo">
+                     <label for="pao">Selecione o pão:</label>
+                     <select name="pao" id="pao">
+                        <option value="frances">Pão Francês</option>
+                        <option value="australiano">Pão Australiano</option>
+                        <option value="brioche">Pão de Brioche</option>
+                     </select>
+                     <div>
+                        <label for="valor_pao">R$ </label>
+                        <input id="valor_pao" type="text" value="3.00" readonly/>
+                     </div>
+                  </div>
+                  <div class="form__conteudo">
+                     <label for="carne">Selecione o Carne:</label>
+                     <select name="carne" id="carne">
+                        <option value="picanha">Hambúrguer de picanha</option>
+                        <option value="costela">Hamburguer de costela</option>
+                        <option value="vegano">Hamburguer Vegano</option>
+                     </select>
+                     <div>
+                        <label for="valor_carne">R$ </label>
+                        <input id="valor_carne" type="text" value="13.00" readonly/>
+                     </div>
+                  </div>
+                  <div class="form__conteudo">
+                     <label for="salada">Selecione a Salada:</label>
+                     <select name="salada" id="salada">
+                        <option value="sem">Sem Salada</option>
+                        <option value="alface">Alface</option>
+                        <option value="tomate">Tomate</option>
+                     </select>
+                     <div>
+                        <label for="valor_salada">R$ </label>
+                        <input id="valor_salada" type="text" value="0.00" readonly/>
+                     </div>
+                  </div>
+                  <div class="form__conteudo">
+                     <label for="queijo">Selecione o Queijo:</label>
+                     <select name="queijo" id="queijo">
+                        <option value="mussarela">Mussarela</option>
+                        <option value="prato">Prato</option>
+                        <option value="cheddar">Cheddar</option>
+                     </select>
+                     <div>
+                        <label for="valor_queijo">R$ </label>
+                        <input id="valor_queijo" type="text" value="3.00" readonly/>
+                     </div>
+                  </div>
+               </section>
+               <div class="">
+                  <button id="calcular_preco">Calcular o Preço</button>
+                  <label for="valor_total">R$ </label>
+                  <input id="valor_total" type="text" readonly/>
+               </div>
+               <div class="form__conteudo" id="pagar"></div>
+            </fieldset>
+         </form>
+         <div id="messagem" style="text-align: center;"></div>
+      </main>
+      <script src="javascript/script.js" defer></script>
+   </body>
+</html>

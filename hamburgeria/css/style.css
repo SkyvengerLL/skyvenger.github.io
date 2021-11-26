@@ -1,0 +1,79 @@
+/* Importações */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+/* O restante */
+body{
+   margin: 0;
+   background-color: rgb(22, 22, 102);
+}
+
+main{
+   margin: 5%;
+   background-color: rgb(214, 203, 161);
+   text-align: center;
+}
+
+h1{
+   font-family: 'Gloria Hallelujah', cursive;
+   font-size: 3rem;
+   font-weight: bold;
+   color: rgb(22, 22, 102);
+}
+
+h2{
+   font-family: 'Playfair Display', serif;
+   font-size: 2rem;
+   font-weight: bold;
+   color: rgb(22, 22, 102);
+}
+
+form{
+   color: rgb(22, 22, 102);
+}
+
+fieldset > legend {
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+label {
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+}
+
+select {
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+}
+
+p {
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+   color: rgb(22, 22, 102);
+}
+
+input {
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+}
+
+button{
+   font-family: 'Playfair Display', serif;
+   font-size: 1.5rem;
+   background-color: rgb(22, 22, 102);
+   color: rgb(214, 203, 161);
+}
+
+.form{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.form__conteudo{
+   margin: 2.5%;
+   width: 40%;
+   display: flex;
+   flex-direction: column;
+}
