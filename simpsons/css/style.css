@@ -1,0 +1,61 @@
+/* importando fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+
+body{
+   margin: 0;
+}
+
+header{
+   display: flex;
+   position: fixed;
+   padding-left: 20%;
+   padding-right: 21%;
+   padding-bottom: 2.5%;
+   padding-top: 2.5%;
+   background-color: rgb(241, 226, 14);
+   font-family: 'Lora', serif;
+}
+
+form{
+   display: flex;
+   margin: 0;
+   width: 100%;
+   justify-content: space-around;
+   align-content: center;
+}
+
+#frase{
+   width: 90%;
+}
+
+#linhas{
+   width: 10%;
+}
+
+.submeter{
+   width: 10%;
+}
+
+.quadro{
+   background-image: url("../assets/quadro-negro.gif");
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 30rem;
+   padding: 5%;
+   padding-top: 15%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-size: 50rem 25rem;
+}
+
+.quadro > p{
+   margin: 0.5%;
+   font-family: 'Lora', serif;
+   color: rgb(241, 226, 14);
+}
+
+.resultado{
+   font-family: 'Lora', serif;
+   font-weight: bold;
+}

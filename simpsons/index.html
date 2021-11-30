@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <header>
+         <form onsubmit="return false;">
+            <div>
+               <label for="frase">Digite a frase que o Bart deve escrever:</label>
+               <input type="text" id="frase" name="frase" />
+            </div>
+            <div>
+               <label for="linhas">Quantas vezes ele escreverá:</label>
+               <input type="number" id="linhas" name="linhas" />
+            </div>
+            <button class="submeter">Iniciar</button>
+         </form>
+      </header>
+      <main>
+         <section class="quadro"></section>
+         <section class="resultado"></section>
+      </main>
+      <script src="javascript/script.js"></script>
+   </body>
+</html>
