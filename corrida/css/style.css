@@ -1,0 +1,36 @@
+body{
+   margin: 0;
+}
+
+.corredor{
+   background-color: yellow;
+   border: 5px solid black;
+   text-justify: center;
+   width: 100%;
+}
+
+.cartao{
+   padding: 2.5%;
+}
+
+input{
+   width: 50%;
+}
+
+.ativo{
+   border: 5px solid black;
+   background-color: white;
+}
+
+.corredores{
+   display: flex;
+   margin: 5%;
+}
+
+.corredor{
+   margin: 2.5%;
+}
+
+button{
+   min-width: 200px;
+}
