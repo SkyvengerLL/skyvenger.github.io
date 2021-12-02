@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body{
+   background-color: rgb(19, 7, 7);;
+   margin: 0%;
+}
+
+main{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Share Tech Mono', monospace;
+}
+
+.formulario{
+   background-color: rgb(219, 233, 248);
+   margin: 10%;
+   margin-bottom: 0%;
+   margin-top: 5%;
+   width: 80%;
+   border-radius: 20px;
+   text-align: center;
+}
+
+.formulario > form{
+   display: flex;
+   justify-content: center;
+}
+
+.formulario > form > *{
+   margin: 2.5%;
+}
+
+.formulario > form > input{
+   width: 10%;
+   border-radius: 20px;
+   padding-left: 2%;
+   font-family: 'Share Tech Mono', monospace;
+}
+
+.botao{
+   background-color: rgb(19, 7, 7);
+   color: rgb(219, 233, 248);
+   width: 10%;
+   padding-top: 1%;
+   padding-bottom: 1%;
+   font-family: 'Share Tech Mono', monospace;
+   font-weight: bold;
+}
+
+.botao:hover{
+   background-color: rgb(219, 233, 248);
+   color: rgb(19, 7, 7);
+}
+
+.acao{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-content: center;
+   background-color: rgb(219, 233, 248);
+   margin: 10%;
+   margin-bottom: 0%;
+   margin-top: 5%;
+   width: 80%;
+   height: 100%;
+   border-radius: 20px;
+   text-align: center;
+}
+
+.numeros__input{
+   width: 15%;
+   margin: 1.5%;
+   padding: 1.5%;
+   background-color: rgb(236, 236, 79);
+   color: rgb(19, 7, 7);
+   border: 5px solid rgb(19, 7, 7);
+   border-radius: 20px;
+   font-family: 'Share Tech Mono', monospace;
+}
+
+.botoes{
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   padding: 2.5%;
+}
+
+.botoes__botao{
+   width: 25% !important;
+   height: 35px;
+   margin: 2.5%;
+}

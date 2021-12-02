@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <main>
+         <section class="formulario">
+            <h2>Entre com os valores</h2>
+            <form onsubmit="return false;">
+               <input type="number" id="num__um" />
+               <input type="number" id="num__dois" />
+               <input type="number" id="num__tres" />
+               <input type="number" id="num__quadro" />
+               <button id="gerar" class="botao">Armazenar</button>
+            </form>
+         </section>
+         <section class="acao">
+            <h2>Manipule os valores</h2>
+            <div class="numeros">
+               <input class="numeros__input" type="text" id="res__um" readonly />
+               <input class="numeros__input" type="text" id="res__dois" readonly />
+               <input class="numeros__input" type="text" id="res__tres" readonly />
+               <input class="numeros__input" type="text" id="res__quadro" readonly />
+            </div>
+            <div class="botoes">
+               <button id="inverter" class="botao botoes__botao" disabled >Inverter</button>
+               <button id="organizar" class="botao botoes__botao" disabled >Organizar</button>
+            </div>
+         </section>
+      </main>
+      <script src="javascript/script.js"></script>
+   </body>
+</html>
