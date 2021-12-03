@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+      <title>Jogo da Velha</title>
+   </head>
+   <body>
+      <main>
+         <section class="informacao">
+            <h1>Jogo da Velha</h1>
+            <section class="jogador">
+               <div class="jogador__card">
+                  <h3>Jogador 1 (O)</h3>
+                  <input type="number" id="vitorias__jogador__um" value="0" readonly />
+               </div>
+               <div class="jogador__card">
+                  <h3>Jogador 2 (X)</h3>
+                  <input type="number" id="vitorias__jogador__dois" value="0" readonly />
+               </div>
+            </section>
+            <button id="botao__de__comeco" class="informacao__botao" >Jogar</button>
+         </section>
+         <canvas id='velha' width="900" height="900" ></canvas>
+      </main>
+      <script src="javascript/script.js"></script>
+   </body>
+</html>
