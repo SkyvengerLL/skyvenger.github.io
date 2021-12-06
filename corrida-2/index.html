@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <main>
+         <h1>Corridas</h1>
+         <section class="corredores">
+            <div class="corredor">
+               <h2>Pedro</h2>
+               <div class="cartao">
+                  <div class="tooltip">
+                     <input type="radio" name="carro__pedro" value="0" id="carroPedro1" />
+                     <label for="carroPedro1" id="labelCarroPedro1" >Carro 1</label>
+                     <span class="tooltiptext" id="carroPedroDetalhes1" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__pedro" value="1" id="carroPedro2" />
+                     <label for="carroPedro2" id="labelCarroPedro2" >Carro 2</label>
+                     <span class="tooltiptext" id="carroPedroDetalhes2" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__pedro" value="2" id="carroPedro3" />
+                     <label for="carroPedro3" id="labelCarroPedro3" >Carro 3</label>
+                     <span class="tooltiptext" id="carroPedroDetalhes3" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__pedro" value="3" id="carroPedro4" />
+                     <label for="carroPedro4" id="labelCarroPedro4" >Carro 4</label>
+                     <span class="tooltiptext" id="carroPedroDetalhes4" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__pedro" value="4" id="carroPedro5" />
+                     <label for="carroPedro5" id="labelCarroPedro5" >Carro 5</label>
+                     <span class="tooltiptext" id="carroPedroDetalhes5" ></span>
+                  </div>
+               </div>
+            </div>
+            <div class="corredor">
+               <h2>Juca</h2>
+               <div class="cartao">
+                  <div class="tooltip">
+                     <input type="radio" name="carro__juca" value="5" id="carroJuca1" />
+                     <label for="carroJuca1" id="labelCarroJuca1" >Carro 1</label>
+                     <span class="tooltiptext" id="carroJucaDetalhes1" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__juca" value="6" id="carroJuca2" />
+                     <label for="carroJuca2" id="labelCarroJuca2" >Carro 2</label>
+                     <span class="tooltiptext" id="carroJucaDetalhes2" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__juca" value="7" id="carroJuca3" />
+                     <label for="carroJuca3" id="labelCarroJuca3" >Carro 3</label>
+                     <span class="tooltiptext" id="carroJucaDetalhes3" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__juca" value="8" id="carroJuca4" />
+                     <label for="carroJuca4" id="labelCarroJuca4" >Carro 4</label>
+                     <span class="tooltiptext" id="carroJucaDetalhes4" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__juca" value="9" id="carroJuca5" />
+                     <label for="carroJuca5" id="labelCarroJuca5" >Carro 5</label>
+                     <span class="tooltiptext" id="carroJucaDetalhes5" ></span>
+                  </div>
+               </div>
+            </div>
+            <div class="corredor">
+               <h2>Edna</h2>
+               <div class="cartao">
+                  <div class="tooltip">
+                     <input type="radio" name="carro__edna" value="10" id="carroEdna1" />
+                     <label for="carroEdna1" id="labelCarroEdna1" >Carro 1</label>
+                     <span class="tooltiptext" id="carroEdnaDetalhes1" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__edna" value="11" id="carroEdna2" />
+                     <label for="carroEdna2" id="labelCarroEdna2" >Carro 2</label>
+                     <span class="tooltiptext" id="carroEdnaDetalhes2" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__edna" value="12" id="carroEdna3" />
+                     <label for="carroEdna3" id="labelCarroEdna3" >Carro 3</label>
+                     <span class="tooltiptext" id="carroEdnaDetalhes3" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__edna" value="13" id="carroEdna4" />
+                     <label for="carroEdna4" id="labelCarroEdna4" >Carro 4</label>
+                     <span class="tooltiptext" id="carroEdnaDetalhes4" ></span>
+                  </div>
+                  <div class="tooltip">
+                     <input type="radio" name="carro__edna" value="14" id="carroEdna5" />
+                     <label for="carroEdna5" id="labelCarroEdna5" >Carro 5</label>
+                     <span class="tooltiptext" id="carroEdnaDetalhes5" ></span>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="corrida">
+            <form onsubmit="return false;">
+               <button id="rapida" class="botao">Corrida Rápida</button>
+               <button id="premio" class="botao">Grande Prêmio</button>
+               <button id="enduro" class="botao">Enduro</button>
+               <div class="corrida__personalizado">
+                  <input type="number" id="voltas" name="voltas" value="0" />
+                  <button id="personalizado" class="botao">Personalizado</button>
+               </div>
+            </form>
+         </section>
+         <section>
+            <div class="primeiro">
+               <h3 id="primeiro"></h3>
+            </div>
+            <div class="segundo">
+               <h3 id="segundo"></h3>
+            </div>
+            <div class="terceiro">
+               <h3 id="terceiro"></h3>
+            </div>
+         </section>
+      </main>
+      <script src="javascript/script.js"></script>
+   </body>
+</html>
