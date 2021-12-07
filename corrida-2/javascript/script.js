@@ -4,6 +4,23 @@ let segundo;
 let terceiro;
 let todosCarros = [];
 let i;
+let geradorDeCarros = {
+   "popular": {
+     "velocidade_maxima": {"min": "180", "max": "200"}, 
+     "velocidade_minima": {"min": "110", "max": "130"}, 
+     "derrapagem": {"min": "3", "max": "4"}
+   },
+   "sport": {
+     "velocidade_maxima": {"min": "195", "max": "215"}, 
+     "velocidade_minima": {"min": "125", "max": "145"}, 
+     "derrapagem": {"min": "2", "max": "3"}
+   },
+   "supersport": {
+     "velocidade_maxima": {"min": "210", "max": "230"}, 
+     "velocidade_minima": {"min": "140", "max": "160"}, 
+     "derrapagem": {"min": "1", "max": "1.75"}
+   },
+ };
 
 function gerarCarro(pessoa, opcao){
    let tipoDeCarro = Math.floor(Math.random() * 100);
@@ -13,6 +30,7 @@ function gerarCarro(pessoa, opcao){
    if (tipoDeCarro <= 60){
       carro = {
          piloto           : pessoa,
+         tipoDoCarro      : "Popular",
          velocidadeMinima : Math.floor(Math.random() * 20) + 110,
          velocidadeMaxima : Math.floor(Math.random() * 20) + 180,
          derrapagem       : (Math.floor(Math.random() * 100) + 3)/100,
@@ -23,6 +41,7 @@ function gerarCarro(pessoa, opcao){
       if (tipoDeCarro <= 95){
          carro = {
             piloto           : pessoa,
+            tipoDoCarro      : "Esporte",
             velocidadeMinima : Math.floor(Math.random() * 20) + 140,
             velocidadeMaxima : Math.floor(Math.random() * 20) + 210,
             derrapagem       : (Math.floor(Math.random() * 100) + 2)/100,
@@ -32,6 +51,7 @@ function gerarCarro(pessoa, opcao){
       }else{
          carro = {
             piloto           : pessoa,
+            tipoDoCarro      : "Super Esporte",
             velocidadeMinima : Math.floor(Math.random() * 20) + 125,
             velocidadeMaxima : Math.floor(Math.random() * 20) + 195,
             derrapagem       : (Math.floor(Math.random() * 75) + 1)/100,
@@ -41,7 +61,7 @@ function gerarCarro(pessoa, opcao){
       }
    }
    todosCarros.push(carro);
-   tooltip.innerHTML = "Velocidade Minima:" + carro.velocidadeMinima + "\nVelocidade Maxima:" + carro.velocidadeMaxima + "\nDerrapagem:" + carro.derrapagem;
+   tooltip.innerHTML = "<strong>" + carro.tipoDoCarro + "</strong>\nVelocidade Minima:" + carro.velocidadeMinima + "\nVelocidade Maxima:" + carro.velocidadeMaxima + "\nDerrapagem:" + carro.derrapagem;
 }
 
 function carros (){
@@ -94,9 +114,9 @@ function corrida (){
 }
 
 function premio (){
-   document.querySelector('#primeiro').innerHTML = "1°" + primeiro.piloto;
-   document.querySelector('#segundo').innerHTML = "2°" + segundo.piloto;
-   document.querySelector('#terceiro').innerHTML = "3°" + terceiro.piloto;
+   document.querySelector('#primeiro').innerHTML = "1° " + primeiro.piloto;
+   document.querySelector('#segundo').innerHTML = "2° " + segundo.piloto;
+   document.querySelector('#terceiro').innerHTML = "3° " + terceiro.piloto;
 }
 
 document.querySelector('#rapida').addEventListener('click', function (){
