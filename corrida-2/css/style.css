@@ -89,3 +89,11 @@ h1{
    background-color: #142221;
    color: rgb(43, 228, 19);
 }
+
+.podium{
+   background-color: #142221;
+   border: 5px solid rgb(43, 228, 19);
+   text-align: center;
+   margin: 10%;
+   width: 80%;
+}

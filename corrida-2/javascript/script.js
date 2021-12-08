@@ -6,62 +6,74 @@ let todosCarros = [];
 let i;
 let geradorDeCarros = {
    "popular": {
-     "velocidade_maxima": {"min": "180", "max": "200"}, 
-     "velocidade_minima": {"min": "110", "max": "130"}, 
-     "derrapagem": {"min": "3", "max": "4"}
+     "velocidade_maxima": {"min": 180, "max": 200}, 
+     "velocidade_minima": {"min": 110, "max": 130}, 
+     "derrapagem": {"min": 300, "max": 400}
    },
    "sport": {
-     "velocidade_maxima": {"min": "195", "max": "215"}, 
-     "velocidade_minima": {"min": "125", "max": "145"}, 
-     "derrapagem": {"min": "2", "max": "3"}
+     "velocidade_maxima": {"min": 195, "max": 215}, 
+     "velocidade_minima": {"min": 125, "max": 145}, 
+     "derrapagem": {"min": 200, "max": 300}
    },
    "supersport": {
-     "velocidade_maxima": {"min": "210", "max": "230"}, 
-     "velocidade_minima": {"min": "140", "max": "160"}, 
-     "derrapagem": {"min": "1", "max": "1.75"}
+     "velocidade_maxima": {"min": 210, "max": 230}, 
+     "velocidade_minima": {"min": 140, "max": 160}, 
+     "derrapagem": {"min": 100, "max": 175}
    },
  };
 
 function gerarCarro(pessoa, opcao){
-   let tipoDeCarro = Math.floor(Math.random() * 100);
+   let tipoDeCarro = Math.random() * 100;
    let carro;
    let tooltip = document.getElementById("carro"+pessoa+"Detalhes"+opcao);
 
    if (tipoDeCarro <= 60){
       carro = {
-         piloto           : pessoa,
-         tipoDoCarro      : "Popular",
-         velocidadeMinima : Math.floor(Math.random() * 20) + 110,
-         velocidadeMaxima : Math.floor(Math.random() * 20) + 180,
-         derrapagem       : (Math.floor(Math.random() * 100) + 3)/100,
+         "piloto"      : pessoa,
+         "tipoDoCarro" : "Popular",
+         "carro"       : {
+            "velocidade"  : {
+               "max" :  Math.floor(Math.random() * (geradorDeCarros["popular"]["velocidade_maxima"]["max"] - geradorDeCarros["popular"]["velocidade_maxima"]["min"])) + geradorDeCarros["popular"]["velocidade_maxima"]["min"],
+               "min" :  Math.floor(Math.random() * (geradorDeCarros["popular"]["velocidade_minima"]["max"] - geradorDeCarros["popular"]["velocidade_minima"]["min"])) + geradorDeCarros["popular"]["velocidade_minima"]["min"]
+            },
+            "derrapagem" : Math.floor(Math.random() * geradorDeCarros["popular"]["derrapagem"])
+         },
          velocidade       : 0,
          contador         : 0
       };
    }else{
-      if (tipoDeCarro <= 95){
+      if (tipoDeCarro >= 95){
          carro = {
-            piloto           : pessoa,
-            tipoDoCarro      : "Esporte",
-            velocidadeMinima : Math.floor(Math.random() * 20) + 140,
-            velocidadeMaxima : Math.floor(Math.random() * 20) + 210,
-            derrapagem       : (Math.floor(Math.random() * 100) + 2)/100,
+            "piloto"      : pessoa,
+            "tipoDoCarro" : "Super Sport",
+            "carro"       : {
+               "velocidade"  : {
+                  "max" :  Math.floor(Math.random() * (geradorDeCarros["supersport"]["velocidade_maxima"]["max"] - geradorDeCarros["supersport"]["velocidade_maxima"]["min"])) + geradorDeCarros["sport"]["velocidade_maxima"]["min"],
+                  "min" :  Math.floor(Math.random() * (geradorDeCarros["supersport"]["velocidade_minima"]["max"] - geradorDeCarros["supersport"]["velocidade_minima"]["min"])) + geradorDeCarros["sport"]["velocidade_minima"]["min"]
+                },
+               "derrapagem" : Math.floor(Math.random() * geradorDeCarros["supersport"]["derrapagem"])
+            },
             velocidade       : 0,
             contador         : 0
          };
       }else{
          carro = {
-            piloto           : pessoa,
-            tipoDoCarro      : "Super Esporte",
-            velocidadeMinima : Math.floor(Math.random() * 20) + 125,
-            velocidadeMaxima : Math.floor(Math.random() * 20) + 195,
-            derrapagem       : (Math.floor(Math.random() * 75) + 1)/100,
-            velocidade       : 0,
-            contador         : 0
+            "piloto"      : pessoa,
+            "tipoDoCarro" : "Sport",
+            "carro"       : {
+               "velocidade"  : {
+                  "max" :  Math.floor(Math.random() * (geradorDeCarros["sport"]["velocidade_maxima"]["max"] - geradorDeCarros["sport"]["velocidade_maxima"]["min"])) + geradorDeCarros["sport"]["velocidade_maxima"]["min"],
+                  "min" :  Math.floor(Math.random() * (geradorDeCarros["sport"]["velocidade_minima"]["max"] - geradorDeCarros["sport"]["velocidade_minima"]["min"])) + geradorDeCarros["sport"]["velocidade_minima"]["min"]
+                },
+               "derrapagem" : (Math.floor(Math.random() * (geradorDeCarros["sport"]["derrapagem"]["max"] - geradorDeCarros["sport"]["derrapagem"]["min"])) + geradorDeCarros["sport"]["derrapagem"]["min"])/100
+            },
+            "velocidade"       : 0,
+            "contador"         : 0
          };
       }
    }
    todosCarros.push(carro);
-   tooltip.innerHTML = "<strong>" + carro.tipoDoCarro + "</strong>\nVelocidade Minima:" + carro.velocidadeMinima + "\nVelocidade Maxima:" + carro.velocidadeMaxima + "\nDerrapagem:" + carro.derrapagem;
+   tooltip.innerHTML = "<strong>" + carro["tipoDoCarro"] + "</strong>\nVelocidade Minima:" + carro["carro"]["velocidade"]["min"] + "\nVelocidade Maxima:" + carro["carro"]["velocidade"]["max"] + "\nDerrapagem:" + carro["carro"]["derrapagem"];
 }
 
 function carros (){
@@ -78,22 +90,22 @@ function corrida (){
    let j;
    let aux;
    let maior = {
-      corredor : '',
-      velocidade: 0
+      "corredor"  : '',
+      "velocidade": 0
    };
    for (i=0; i<voltas;i++){
-      corredores.forEach(element => {
-         element.velocidade = (Math.floor(Math.random() * element.velocidadeMaxima - element.velocidadeMinima) + element.velocidadeMinima)*((100-element.derrapagem)/100);
+      corredores.forEach(carro => {
+         carro["velocidade"] = (Math.floor(Math.random() * carro["carro"]["velocidade"]["max"] - carro["carro"]["velocidade"]["min"]) + carro["carro"]["velocidade"]["min"])*((100-carro["carro"]["derrapagem"])/100);
       });
       for (j=0; j<3; j++){
-         if (maior.velocidade < corredores[j].velocidade){
-            maior.corredor = corredores[j].corredor;
-            maior.velocidade = corredores[j].velocidade;
+         if (maior["velocidade"] < corredores[j]["velocidade"]){
+            maior["corredor"] = corredores[j]["piloto"];
+            maior["velocidade"] = corredores[j]["velocidade"];
          }
       }
       corredores.forEach(element =>{
-         if (element.corredor == maior.corredor){
-            element.vitorias++;
+         if (element["piloto"] == maior["corredor"]){
+            element["contador"]++;
          }
       });
       maior.velocidade=0;
@@ -101,7 +113,7 @@ function corrida (){
 
    for (i=0; i<3;i++){
       for (j=i; j<3;j++){
-         if (corredores[i].contador < corredores[j].contador){
+         if (corredores[i]["contador"] < corredores[j]["contador"]){
             aux = corredores[i];
             corredores[i] = corredores[j];
             corredores[j] = aux;
