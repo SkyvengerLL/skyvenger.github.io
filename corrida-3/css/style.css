@@ -1,0 +1,99 @@
+body{
+   margin: 0px;
+   background-color: #142221;
+   color: rgb(43, 228, 19);
+}
+
+h1{
+   text-align: center;
+}
+
+.corredor{
+   background-color: #142221;
+   border: 5px solid rgb(43, 228, 19);
+   text-align: center;
+   width: 100%;
+}
+
+.cartao{
+   padding: 10%;
+   display: flex;
+   flex-direction: column;
+}
+
+.tooltip {
+   position: relative;
+   display: inline-block;
+ }
+
+.tooltip  .tooltiptext {
+   visibility: hidden;
+   width: auto;
+   height: auto;
+   background-color: rgb(43, 228, 19);
+   color: #142221;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+ 
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+   visibility: visible;
+}
+
+.corredores{
+   display: flex;
+   margin: 5%;
+}
+
+.corredor{
+   margin: 2.5%;
+}
+
+.corrida{
+   border: 5px solid rgb(43, 228, 19);
+   background-color: #142221;
+   margin: 7.5%;
+   padding: 5%;
+   width: 75%;
+}
+
+.corrida > form{
+   width: 100%;
+   display: flex;
+}
+
+.corrida > form > * {
+   margin: 1%;
+}
+
+.corrida__personalizado{
+   display: flex;
+   flex: 1;
+}
+
+.botao{
+   border: 2px solid rgb(43, 228, 19);
+   background-color: rgb(43, 228, 19);
+   color: #142221;
+   padding: 1.2%;
+   width: 100%;
+   flex: 1;
+}
+
+.botao:hover{
+   background-color: #142221;
+   color: rgb(43, 228, 19);
+}
+
+.podium{
+   background-color: #142221;
+   border: 5px solid rgb(43, 228, 19);
+   text-align: center;
+   margin: 10%;
+   width: 80%;
+}
