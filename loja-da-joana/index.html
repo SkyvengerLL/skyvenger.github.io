@@ -5,8 +5,37 @@
       <link rel="stylesheet" href="css/style.css" />
    </head>
    <body>
-      <main>
-         <section></section>
+      <main id="main">
+         <section class="loja">
+            <h1>Loja da Joana</h1>
+            <form id="formulario" action="" onsubmit="return false;">
+               <fieldset class="loja__formulario">
+                  <div>
+                     <label for="nomeComprador">Nome:</label>
+                     <input type="text" id="nomeComprador" name="nomeComprador" />
+                  </div>
+                  <div>
+                     <label for="preco">Preço da compra (R$): </label>
+                     <input type="number" id="preco" name="preco" />
+                  </div>
+                  <div>
+                     <label for="data">Data de Vencimento:</label>
+                     <input type="date" id="data" name="data" />
+                  </div>
+                  <input type="submit" id="botaoDeSubmicao" class="formulario__botao" />
+               </fieldset>
+            </form>
+         </section>
+         <section class="tabela">
+            <table id="tabela">
+               <tr>
+                  <th><strong>Nome do Cliente</strong></th>
+                  <th><strong>Data de Vencimento</strong></th>
+                  <th><strong>Preço da Compra</strong></th>
+               </tr>
+            </table>
+            <button class="botao" id="juros">Calcular juros de duplicatas</button>
+         </section>
       </main>
       <script src="javascript/script.js"></script>
    </body>

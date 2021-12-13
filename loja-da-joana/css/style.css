@@ -1,0 +1,71 @@
+body{
+   margin: 0px;
+}
+
+main{
+   margin: 5%;
+   margin-top: 0%;
+   padding: 5%;
+   width: 80%;
+}
+
+table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+td, th {
+   border: 1px solid #0f1014;
+   text-align: left;
+   padding: 8px;
+   color: #0f1014;
+}
+
+.loja{
+   font-family: arial, sans-serif;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+
+.loja__formulario{
+   display: flex;
+   flex-direction: column;
+   padding: 1.5%;
+}
+
+.loja__formulario > *{
+   margin: 0.5%;
+   display: flex;
+}
+
+.formulario__input{
+   width: 80%;
+}
+
+.formulario__botao{
+   width: 10%;
+   padding-left: 2.5%;
+   padding-right: 2.5%;
+   font-family: arial, sans-serif;
+   color: #0f1014;
+}
+
+.formulario__botao:hover{
+   background-color: #0f1014;
+   color: #dddddd;
+}
+
+.botao{
+   width: 95%;
+   padding-left: 2.5%;
+   padding-right: 2.5%;
+   font-family: arial, sans-serif;
+   color: #0f1014;
+}
+
+.botao:hover{
+   background-color: #0f1014;
+   color: #dddddd;
+}
