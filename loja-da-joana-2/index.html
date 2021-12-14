@@ -1,0 +1,50 @@
+<!-- github: https://github.com/SkyvengerLL/skyvengerll.github.io/tree/master/loja-da-joana
+     online: https://skyvengerll.github.io/loja-da-joana/
+-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <main id="main">
+         <section class="loja">
+            <h1>Loja da Joana</h1>
+            <form id="formulario" action="" onsubmit="return false;">
+               <fieldset class="loja__formulario">
+                  <div>
+                     <label for="nomeComprador" class="forlumario__label">Nome:</label>
+                     <input type="text" id="nomeComprador" name="nomeComprador" />
+                  </div>
+                  <div>
+                     <label for="preco" class="forlumario__label">Preço da compra (R$): </label>
+                     <input type="number" id="preco" name="preco" />
+                  </div>
+                  <div>
+                     <label for="data" class="forlumario__label">Data de Vencimento:</label>
+                     <input type="date" id="data" name="data" />
+                  </div>
+                  <input type="submit" id="botaoDeSubmicao" class="formulario__botao" />
+               </fieldset>
+            </form>
+         </section>
+         <section class="tabela">
+            <table id="tabela">
+               <tr>
+                  <th><strong>Nome do Cliente</strong></th>
+                  <th><strong>Data de Vencimento</strong></th>
+                  <th><strong>Preço da Compra</strong></th>
+               </tr>
+            </table>
+            <div>
+               <button class="botao" id="agruparCliente">Juntar por Clientes</button>
+               <button class="botao" id="agruparData">Juntar por Data</button>
+               <button class="botao" id="juros">Calcular juros de duplicatas</button>
+            </div>
+         </section>
+      </main>
+      <script src="javascript/script.js"></script>
+   </body>
+</html>
