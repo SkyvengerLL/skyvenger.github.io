@@ -58,3 +58,17 @@ td, th {
    padding: 8px;
    color: #0f1014;
 }
+
+.botao{
+   border-radius: 5px;
+   width: 95%;
+   padding-left: 2.5%;
+   padding-right: 2.5%;
+   font-family: arial, sans-serif;
+   color: #0f1014;
+}
+
+.botao:hover{
+   background-color: #0f1014;
+   color: #dddddd;
+}
