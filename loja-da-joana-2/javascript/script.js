@@ -17,6 +17,20 @@ const datas = (listaAntiga, novoValor) => {
    });
    return listaAntiga;
 };
+const nomes = (listaAntiga, novoValor) => {
+   let i;
+   for (i=0; i<listaAntiga.length; i++){
+      if (listaAntiga[i].cliente == novoValor.cliente){
+         listaAntiga[i].clientes.push(novoValor);
+         return listaAntiga;
+      }
+   }
+   listaAntiga.push({
+      cliente     : novoValor.cliente,
+      clientes    : [novoValor]
+   });
+   return listaAntiga;
+};
 
 document.getElementById("botaoDeSubmicao").addEventListener('click', function (){
    let nome = document.getElementById("nomeComprador");
@@ -113,16 +127,16 @@ document.getElementById("agruparData").addEventListener('click', function (){
    let tamanhoDaTabela = tabela.rows.length;
    let linha;
    let celula;
-   console.log(conteudo);
    for (i=1; i<tamanhoDaTabela; i++){
       tabela.deleteRow(1);
    }
    for (i=0; i<conteudo.length; i++){
       linha = tabela.insertRow(1+k);
+      linha.classList.add("tabela__divisor");
+      celula.setAttribute("colspan",5);
       k++;
       celula = linha.insertCell(0);
       celula.innerHTML = conteudo[i].data;
-      celula.class = "tabela__divisor";
       for (j=0; j<conteudo[i].clientes.length; j++){
          linha = tabela.insertRow(1+k);
          k++;
@@ -143,4 +157,56 @@ document.getElementById("agruparData").addEventListener('click', function (){
          celula.class = "";
       }
    }
+   linha = tabela.insertRow(1+k);
+   linha.classList.add("tabela__divisor");
+   celula = linha.insertCell(0);
+   celula.innerHTML = "Novos Clientes";
+   celula.setAttribute("colspan",5);
+});
+
+document.getElementById("agruparCliente").addEventListener('click', function (){
+   let tabela = document.getElementById("tabela");
+   let conteudo = clientes.reduce(nomes, []);
+   let i;
+   let j;
+   let k = 0;
+   let tamanhoDaTabela = tabela.rows.length;
+   let linha;
+   let celula;
+   for (i=1; i<tamanhoDaTabela; i++){
+      tabela.deleteRow(1);
+   }
+   for (i=0; i<conteudo.length; i++){
+      linha = tabela.insertRow(1+k);
+      k++;
+      celula = linha.insertCell(0);
+      celula.innerHTML = conteudo[i].cliente;
+      linha.classList.add("tabela__divisor");
+      celula.setAttribute("colspan",5);
+      celula.colspan = 5;
+      for (j=0; j<conteudo[i].clientes.length; j++){
+         linha = tabela.insertRow(1+k);
+         k++;
+         celula = linha.insertCell(0);
+         celula.innerHTML = conteudo[i].clientes[j].cliente;
+         celula.class = "";
+         celula = linha.insertCell(1);
+         celula.innerHTML = conteudo[i].clientes[j].data;
+         celula.class = "";
+         celula = linha.insertCell(2);
+         celula.innerHTML = conteudo[i].clientes[j].preco;
+         celula.class = "";
+         celula = linha.insertCell(3);
+         celula.innerHTML = conteudo[i].clientes[j].juros;
+         celula.class = "";
+         celula = linha.insertCell(4);
+         celula.innerHTML = conteudo[i].clientes[j].precoTotal;
+         celula.class = "";
+      }
+   }
+   linha = tabela.insertRow(1+k);
+   linha.classList.add("tabela__divisor");
+   celula = linha.insertCell(0);
+   celula.innerHTML = "Novos Clientes";
+   celula.setAttribute("colspan",5);
 });
