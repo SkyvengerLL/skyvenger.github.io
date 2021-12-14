@@ -7,13 +7,13 @@ const datas = (listaAntiga, novoValor) => {
    let i;
    for (i=0; i<listaAntiga.length; i++){
       if (listaAntiga[i].data == novoValor.data){
-         listaAntiga[i].cliente.push(novoValor);
+         listaAntiga[i].clientes.push(novoValor);
          return listaAntiga;
       }
    }
    listaAntiga.push({
-      data    : novoValor.data,
-      cliente : [novoValor]
+      data     : novoValor.data,
+      clientes : [novoValor]
    });
    return listaAntiga;
 };
@@ -24,9 +24,11 @@ document.getElementById("botaoDeSubmicao").addEventListener('click', function ()
    let data = document.getElementById("data");
    let tabela =  document.getElementById("tabela");
    let cliente = {
-      cliente: nome.value,
-      preco  : preco.value,
-      data   : data.value
+      cliente   : nome.value,
+      preco     : preco.value,
+      data      : data.value,
+      juros     : 0,
+      precoTotal: preco.value
    };
    if (nome.value == ""){
       nome.style="border: 1px solid #be4527;";
@@ -66,7 +68,7 @@ document.getElementById("botaoDeSubmicao").addEventListener('click', function ()
    nomeLinha.innerHTML = nome.value;
    precoLinha.innerHTML = formatter.format(preco.value);
    dataLinha.innerHTML = data.value;
-   jurosLinha.innerHTML = "";
+   jurosLinha.innerHTML = "0";
    precoTotal.innerHTML = formatter.format(preco.value);
    document.getElementById('formulario').reset();
 });
@@ -95,12 +97,50 @@ document.getElementById("juros").addEventListener('click', function (){
    let i;
    for (i=0; i< juros.length;i++){
       tabela.rows[1+i].cells[3].innerHTML = formatter.format(juros[i].juros);
-      let precoTotal = (Number(clientes[i].preco) + juros[i].juros)
+      clientes[i].juros = juros[i].juros;
+      let precoTotal = (Number(clientes[i].preco) + juros[i].juros);
+      clientes[i].precoTotal = precoTotal;
       tabela.rows[1+i].cells[4].innerHTML = formatter.format(precoTotal);
    }
 });
 
 document.getElementById("agruparData").addEventListener('click', function (){
-   
-   console.log(clientes.reduce(datas, []));
+   let tabela = document.getElementById("tabela");
+   let conteudo = clientes.reduce(datas, []);
+   let i;
+   let j;
+   let k = 0;
+   let tamanhoDaTabela = tabela.rows.length;
+   let linha;
+   let celula;
+   console.log(conteudo);
+   for (i=1; i<tamanhoDaTabela; i++){
+      tabela.deleteRow(1);
+   }
+   for (i=0; i<conteudo.length; i++){
+      linha = tabela.insertRow(1+k);
+      k++;
+      celula = linha.insertCell(0);
+      celula.innerHTML = conteudo[i].data;
+      celula.class = "tabela__divisor";
+      for (j=0; j<conteudo[i].clientes.length; j++){
+         linha = tabela.insertRow(1+k);
+         k++;
+         celula = linha.insertCell(0);
+         celula.innerHTML = conteudo[i].clientes[j].cliente;
+         celula.class = "";
+         celula = linha.insertCell(1);
+         celula.innerHTML = conteudo[i].clientes[j].data;
+         celula.class = "";
+         celula = linha.insertCell(2);
+         celula.innerHTML = conteudo[i].clientes[j].preco;
+         celula.class = "";
+         celula = linha.insertCell(3);
+         celula.innerHTML = conteudo[i].clientes[j].juros;
+         celula.class = "";
+         celula = linha.insertCell(4);
+         celula.innerHTML = conteudo[i].clientes[j].precoTotal;
+         celula.class = "";
+      }
+   }
 });
