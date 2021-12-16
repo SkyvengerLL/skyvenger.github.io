@@ -1,4 +1,5 @@
 const clientes = [];
+let ordenado = [];
 const formatter = new Intl.NumberFormat('pt-BR', {
    minimumFractionDigits: 2,      
    maximumFractionDigits: 2,
@@ -31,6 +32,11 @@ const nomes = (listaAntiga, novoValor) => {
    });
    return listaAntiga;
 };
+const divida = (precoAtual, novoPreco) => {
+   console.log(novoPreco.precoTotal)
+   precoAtual += Number(novoPreco.precoTotal);
+   return precoAtual;
+}
 
 document.getElementById("botaoDeSubmicao").addEventListener('click', function (){
    let nome = document.getElementById("nomeComprador");
@@ -157,6 +163,7 @@ document.getElementById("agruparData").addEventListener('click', function (){
          celula.class = "";
       }
    }
+   ordenado = conteudo;
    linha = tabela.insertRow(1+k);
    linha.classList.add("tabela__divisor");
    celula = linha.insertCell(0);
@@ -182,8 +189,9 @@ document.getElementById("agruparCliente").addEventListener('click', function (){
       celula = linha.insertCell(0);
       celula.innerHTML = conteudo[i].cliente;
       linha.classList.add("tabela__divisor");
-      celula.setAttribute("colspan",5);
-      celula.colspan = 5;
+      celula.setAttribute("colspan",4);
+      celula = linha.insertCell(1);
+      celula.innerHTML = conteudo[i].clientes.reduce(divida, 0);
       for (j=0; j<conteudo[i].clientes.length; j++){
          linha = tabela.insertRow(1+k);
          k++;
@@ -204,6 +212,7 @@ document.getElementById("agruparCliente").addEventListener('click', function (){
          celula.class = "";
       }
    }
+   ordenado = conteudo;
    linha = tabela.insertRow(1+k);
    linha.classList.add("tabela__divisor");
    celula = linha.insertCell(0);
