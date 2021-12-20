@@ -1,0 +1,75 @@
+<!-- github: https://github.com/SkyvengerLL/skyvengerll.github.io/tree/master/loja-da-joana-3
+     online: https://skyvengerll.github.io/loja-da-joana-3/
+-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <main id="main">
+         <h1>Loja da Joana</h1>
+         <section class="loja">
+            <form id="recibos" class="formulario" action="" onsubmit="return false;">
+               <fieldset class="loja__formulario">
+                  <div>
+                     <label for="nomeComprador" class="forlumario__label">Nome:</label>
+                     <input type="text" id="nomeComprador" name="nomeComprador" />
+                  </div>
+                  <div>
+                     <label for="preco" class="forlumario__label">Preço da compra (R$): </label>
+                     <input type="number" id="preco" name="preco" />
+                  </div>
+                  <div>
+                     <label for="data" class="forlumario__label">Data de Vencimento:</label>
+                     <input type="date" id="data" name="data" />
+                  </div>
+                  <input type="submit" id="botaoDeSubmicao" class="formulario__botao" />
+               </fieldset>
+            </form>
+         </section>
+         <section class="tabela">
+            <table id="tabela">
+               <tr class="tabela__divisor">
+                  <th class="tabela__titulo"><strong>Nome do Cliente</strong></th>
+                  <th class="tabela__titulo"><strong>Data de Vencimento</strong></th>
+                  <th class="tabela__titulo"><strong>Preço da Compra (R$)</strong></th>
+                  <th class="tabela__titulo"><strong>Juros (R$)</strong></th>
+                  <th class="tabela__titulo"><strong>Total (R$)</strong></th>
+               </tr>
+            </table>
+            <div>
+               <button class="botao" id="agruparCliente">Juntar por Clientes</button>
+               <button class="botao" id="agruparData">Juntar por Data</button>
+               <button class="botao" id="juros">Calcular juros de duplicatas</button>
+            </div>
+         </section>
+      </main>
+      <section class="filtro">
+         <form action="" onsubmit="return false;">
+            <fieldset class="loja__formulario">
+               <div>
+                  <label for="precoInicio" class="forlumario__label">Começo da Faixa de Dinheiro(R$):</label>
+                  <input type="number" id="precoInicio" name="precoInicio" />
+               </div>
+               <div>
+                  <label for="precoFim" class="forlumario__label">Fim da Faixa de Dinheiro(R$): </label>
+                  <input type="number" id="precoFim" name="precoFim" />
+               </div>
+               <div>
+                  <label for="dataInicio" class="forlumario__label">Começo da da Data de Vencimento:</label>
+                  <input type="date" id="dataInicio" name="dataInicio" />
+               </div>
+               <div>
+                  <label for="dataFim" class="forlumario__label">Fim da da Data de Vencimento:</label>
+                  <input type="date" id="dataFim" name="dataFim" />
+               </div>
+               <input type="submit" id="botaoDeFiltro" class="formulario__botao" />
+            </fieldset>
+         </form>
+      </section>
+      <script src="javascript/script.js"></script>
+   </body>
+</html>
