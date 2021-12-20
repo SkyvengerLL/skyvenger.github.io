@@ -45,53 +45,6 @@ const divida = (precoAtual, novoPreco) => {
    return precoAtual;
 }
 
-function filtrar(cliente){
-   let vencimento = new Date(cliente.data);
-   if (filtro.dataInicio != undefined){
-      let inicio = new Date(filtro.dataInicio);
-      if (vencimento.getTime() < inicio.getTime()){
-         return false;
-      }
-   }
-   if (filtro.dataFim != undefined){
-      let fim = new Date(filtro.dataFim);
-      if (vencimento.getTime() > fim.getTime()){
-         return false;
-      }
-   }
-   if ((filtro.precoInicio != undefined) && (cliente.preco < Number(filtro.precoInicio))){
-      return false;
-   }
-   if ((filtro.precoFim != undefined) && (cliente.preco > Number(filtro.precoFim))){
-      return false;
-   }
-   return true;
-}
-
-function desenhar (){
-   let tabela =  document.getElementById("tabela");
-   let tamanhoDaTabela = tabela.rows.length;
-   let i;
- 
-   for (i=1; i<tamanhoDaTabela; i++){
-      tabela.deleteRow(1);
-   }
-   for (i=1; i<=mostrar.length; i++){
-      let linha = tabela.insertRow(i);
-
-      celula = linha.insertCell(0);
-      celula.innerHTML = mostrar[i-1].cliente;
-      celula = linha.insertCell(1);
-      celula.innerHTML = mostrar[i-1].data;
-      celula = linha.insertCell(2);
-      celula.innerHTML = formatter.format(mostrar[i-1].preco);
-      celula = linha.insertCell(3);
-      celula.innerHTML = formatter.format(mostrar[i-1].juros);
-      celula = linha.insertCell(4);
-      celula.innerHTML = formatter.format(mostrar[i-1].precoTotal);
-   }
-}
-
 document.getElementById("botaoDeSubmicao").addEventListener('click', function (){
    let nome = document.getElementById("nomeComprador");
    let preco = document.getElementById("preco");
@@ -261,6 +214,54 @@ document.getElementById("agruparCliente").addEventListener('click', function (){
    celula.innerHTML = "Novos Clientes";
    celula.setAttribute("colspan",5);
 });
+
+
+function filtrar(cliente){
+   let vencimento = new Date(cliente.data);
+   if (filtro.dataInicio != undefined){
+      let inicio = new Date(filtro.dataInicio);
+      if (vencimento.getTime() < inicio.getTime()){
+         return false;
+      }
+   }
+   if (filtro.dataFim != undefined){
+      let fim = new Date(filtro.dataFim);
+      if (vencimento.getTime() > fim.getTime()){
+         return false;
+      }
+   }
+   if ((filtro.precoInicio != undefined) && (cliente.preco < Number(filtro.precoInicio))){
+      return false;
+   }
+   if ((filtro.precoFim != undefined) && (cliente.preco > Number(filtro.precoFim))){
+      return false;
+   }
+   return true;
+}
+
+function desenhar (){
+   let tabela =  document.getElementById("tabela");
+   let tamanhoDaTabela = tabela.rows.length;
+   let i;
+ 
+   for (i=1; i<tamanhoDaTabela; i++){
+      tabela.deleteRow(1);
+   }
+   for (i=1; i<=mostrar.length; i++){
+      let linha = tabela.insertRow(i);
+
+      celula = linha.insertCell(0);
+      celula.innerHTML = mostrar[i-1].cliente;
+      celula = linha.insertCell(1);
+      celula.innerHTML = mostrar[i-1].data;
+      celula = linha.insertCell(2);
+      celula.innerHTML = formatter.format(mostrar[i-1].preco);
+      celula = linha.insertCell(3);
+      celula.innerHTML = formatter.format(mostrar[i-1].juros);
+      celula = linha.insertCell(4);
+      celula.innerHTML = formatter.format(mostrar[i-1].precoTotal);
+   }
+}
 
 
 document.getElementById("botaoDeFiltro").addEventListener('click', function (){
