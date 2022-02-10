@@ -1,0 +1,40 @@
+body{
+   margin: 0;
+   padding: 0;
+   background-color: #408040;
+}
+main{
+   background-color: rgb(231, 205, 171);
+   width: 80%;
+   margin: 10%;
+   margin-top: 2.5%;
+   border: 5px solid #000;
+   border-radius: 25px;
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+}
+.form{
+   display: flex;
+   flex-direction: column;
+   padding: 5% 1%;
+}
+
+table{
+   background-color: #fff;
+   border: 2px solid #000;
+   align-self: center;
+}
+td{
+   border: 2px solid #000;
+}
+
+.mod{
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   margin: 2%;
+   padding: 2%;
+   border: 2px solid #000;
+   text-justify: center;
+}

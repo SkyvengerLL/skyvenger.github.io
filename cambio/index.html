@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <main>
+         <h1>Câmbio para Real Brasileiro</h1>
+         <fieldset>
+            <div class="form">
+               <div>
+                  <label for="moedas">Moedas</label>
+                  <select id="moedas" value="nenhum">
+                     <option value="nenhum"></option>
+                  </select>
+               </div>
+               <div>
+                  <label for="inicio">Data de inicio de Pesquisa:</label>
+                  <input id="inicio" type="date" />
+               </div>
+               <div>
+                  <label for="fim">Data de fim de Pesquisa:</label>
+                  <input id="fim" type="date" />
+               </div>
+               <button id="busca" >Buscar</button>
+            </div>
+         </fieldset>
+         <section id="resposta">
+         </section>
+      </main>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+      <script src="javascript/script.js" defer></script>
+   </body>
+</html>
